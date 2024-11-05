@@ -2,7 +2,7 @@ name: Scheduled Python Script
 
 on:
   schedule:
-    - cron: '15 * * * *'  # Runs every hour at 15 minutes past (UTC)
+    - cron: '*/5 * * * *'  # Runs every hour at 15 minutes past (UTC)
 
 jobs:
   run-script:
