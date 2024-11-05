@@ -8,9 +8,9 @@ import calendar
 from time import sleep
 
 months = list(calendar.month_name)[1:]
-season = 2024
+# season = 2024
 
-# season = min([int(f.split('_')[-1].split('.')[0]) for f in os.listdir('data')])
+season = min([int(f.split('_')[-1].split('.')[0]) for f in os.listdir('data')]) - 1
 
 def getId(tag) :
     return tag['href'].split('/')[-1].split('.html')[0]
@@ -136,3 +136,7 @@ for m, month_url in enumerate(month_urls) :
         first_basket_df.to_csv(f'data/first_basket_{season}.csv', index = False)
     else :
         first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
+
+
+with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+    env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
