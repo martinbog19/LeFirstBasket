@@ -10,9 +10,10 @@ from time import sleep
 months = list(calendar.month_name)[1:]
 season = 2024
 
+# season = min([int(f.split('_')[-1].split('.')[0]) for f in os.listdir('data')])
+
 def getId(tag) :
     return tag['href'].split('/')[-1].split('.html')[0]
-
 
 def get_monthly_games(month_url) :
 
