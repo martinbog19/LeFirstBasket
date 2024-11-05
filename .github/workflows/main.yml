@@ -2,8 +2,8 @@ name: my Scheduled Python Script
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs every 5 minutes
-  workflow_dispatch:        # Allows manual trigger
+    - cron: '0 */3 * * *'  
+  workflow_dispatch:   
 
 jobs:
   run-script:
@@ -25,10 +25,10 @@ jobs:
 
 
       - name: Run Python script
-        run: python test.py
+        run: python scrape.py
 
       - name: Upload CSV file
         uses: actions/upload-artifact@v3
         with:
-          name: test-csv
-          path: test.csv  # Make sure this matches the filename in your script
+          name: first-basket-csv
+          path: ${{ env.FILENAME }}  # Make sure this matches the filename in your script
