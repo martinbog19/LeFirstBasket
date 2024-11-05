@@ -2,7 +2,7 @@ name: my Scheduled Python Script
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Runs every 5 minutes
+    - cron: '*/5 * * * *'  # Runs every 5 minutes
   workflow_dispatch:        # Allows manual trigger
 
 jobs:
@@ -25,4 +25,4 @@ jobs:
 
 
       - name: Run Python script
-        run: python scrape.py
+        run: python test.py
