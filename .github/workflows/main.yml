@@ -19,4 +19,4 @@ jobs:
           python-version: '3.x'
 
       - name: Run Python script
-        run: python test.py
+        run: python scrape.py
