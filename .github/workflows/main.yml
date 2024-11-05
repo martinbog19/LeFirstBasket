@@ -26,3 +26,9 @@ jobs:
 
       - name: Run Python script
         run: python test.py
+
+      - name: Upload CSV file
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-csv
+          path: test.csv  # Make sure this matches the filename in your script
