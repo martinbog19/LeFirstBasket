@@ -1,5 +1,8 @@
- # Example Python Script
-from datetime import datetime
+import pandas as pd
+import numpy as pd
 
-# Print current time
-print("Hello! The current time is:", datetime.now())
+
+
+df = pd.DataFrame(np.array([[0,1], [2,3]]))
+
+df.to_csv('test.csv')
