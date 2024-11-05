@@ -1,4 +1,4 @@
-name: Scheduled Python Script
+name: My Scheduled Python Script
 
 on:
   schedule:
