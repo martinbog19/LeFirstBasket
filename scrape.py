@@ -11,7 +11,7 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 months = list(calendar.month_name)[1:]
-season = 2024
+season = 2023
 
 # season = min([int(f.split('_')[-1].split('.')[0]) for f in os.listdir('data')]) - 1
 
