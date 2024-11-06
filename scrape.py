@@ -40,7 +40,7 @@ def get_first_basket(gameId) :
     soup = BeautifulSoup(page.content, 'lxml')
     away, home = [x['href'].split('/')[2] for x in soup.find_all('a', href = True) if 'teams' in x['href']][1:3]
     table = soup.find('table')
-    if table :
+    if len(table.find_all('tr')) > 1 :
         table.find('tr', class_ = 'thead').decompose()
         pbp = pd.read_html(str(table))[0]
         cols_ = pbp.columns.to_list()
@@ -92,40 +92,33 @@ def get_first_basket(gameId) :
         away_misses = pbp['away_miss'].sum()
         first_basket_tm = home * pbp['home_make'].values[-1] + away * pbp['away_make'].values[-1]
         first_basket = pbp['player'].values[-1]
-    
-        return pd.DataFrame(
-                    [[gameId, home, away, first_basket, first_basket_tm, time_elapsed, num_shots, pts_scored, home_misses, away_misses,
-                      jb_home, jb_away, jb_poss, jb_poss_tm]],
-                    columns = [
-                        'game_id',
-                        'Home',
-                        'Away',
-                        'first_basket',
-                        'first_basket_tm',
-                        'time_elapsed',
-                        'num_shots',
-                        'pts_scored',
-                        'misses_home',
-                        'misses_away',
-                        'jumpball_home',
-                        'jumpball_away',
-                        'jumpball_possession',
-                        'jumpball_possession_tm'
-                    ]
-                )
         
     else :
-
-        print(f'No play-by-play date for {gameId}...')
-        return pd.DataFrame(
-                    [[gameId, home, away, None, None, None, None, None, None, None,
-                      None, None, None, None]],
-                    columns = [
-                        'game_id', 'Home', 'Away',
-                        'first_basket', 'first_basket_tm', 'time_elapsed', 'num_shots', 'pts_scored', 'misses_home', 'misses_away',
-                        'jumpball_home', 'jumpball_away', 'jumpball_possession', 'jumpball_possession_tm'
-                    ]
-                )
+        first_basket, first_basket_tm = None, None
+        time_elapsed, num_shots, pts_scored, home_misses, away_misses = None, None, None, None, None
+        jb_home, jb_away, jb_poss, jb_poss_tm = None, None, None, None
+    
+    return pd.DataFrame(
+                [[gameId, home, away, first_basket, first_basket_tm, time_elapsed, num_shots, pts_scored, home_misses, away_misses,
+                  jb_home, jb_away, jb_poss, jb_poss_tm]],
+                columns = [
+                    'game_id',
+                    'Home',
+                    'Away',
+                    'first_basket',
+                    'first_basket_tm',
+                    'time_elapsed',
+                    'num_shots',
+                    'pts_scored',
+                    'misses_home',
+                    'misses_away',
+                    'jumpball_home',
+                    'jumpball_away',
+                    'jumpball_possession',
+                    'jumpball_possession_tm'
+                ]
+            )
+    
 
         
 
