@@ -118,7 +118,7 @@ def get_first_basket(gameId) :
                     ]
                 )
     
-seasons = [2023, 2019, 2018]
+seasons = [2022]
 for season in seasons :
     url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
     page = requests.get(url)
@@ -147,5 +147,5 @@ for season in seasons :
             first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
 
 
-# with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-#     env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
+with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+    env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
