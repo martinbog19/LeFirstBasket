@@ -11,9 +11,6 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 months = list(calendar.month_name)[1:]
-season = 2023
-
-# season = min([int(f.split('_')[-1].split('.')[0]) for f in os.listdir('data')]) - 1
 
 def getId(tag) :
     return tag['href'].split('/')[-1].split('.html')[0]
@@ -42,6 +39,7 @@ def get_first_basket(gameId) :
     table = soup.find('table')
     if len(table.find_all('tr')) > 1 :
         table.find('tr', class_ = 'thead').decompose()
+        rows = table.find_all('tr')
         pbp = pd.read_html(str(table))[0]
         cols_ = pbp.columns.to_list()
         cols_[1] = away
@@ -50,17 +48,18 @@ def get_first_basket(gameId) :
         pbp['pts_scored'] = pbp['Score'].apply(lambda x: np.array(x.split('-')).astype(int).sum()
                             if re.search(r'\d+-\d+', x)
                             else np.nan)
-    
-        n_actions_before_pts = (pbp['pts_scored'] > 0).argmax() + 1
-    
-        # Keep rows until first points scored -- excluding jump ball
-        pbp = pbp.head(n_actions_before_pts)[1:]
-    
-        # Store player involved
-        rows = table.find_all('tr')
-        pbp['player'] = [getId(row.find_all('a', href = True)[0]) if row.find('a', href = True) else ''
-                     for row in rows[2:n_actions_before_pts+1]]
         
+        jumpball_exists = 'Jump ball' in rows[1].text
+
+        n_actions_before_pts = (pbp['pts_scored'] > 0).argmax() + 1
+
+        # Keep rows until first points scored -- excluding jump ball
+        pbp = pbp.head(n_actions_before_pts)[int(jumpball_exists):]
+
+
+        pbp['player'] = [getId(row.find_all('a', href = True)[0]) if row.find('a', href = True) else ''
+                        for row in rows[jumpball_exists+1:n_actions_before_pts+1]]
+
         # Check if miss or make or neither
         pbp = pbp.fillna('')
         pbp['home_miss'] = pbp[home].apply(lambda x: 'misses' in x).astype(int)
@@ -69,10 +68,10 @@ def get_first_basket(gameId) :
         pbp['away_make'] = pbp[away].apply(lambda x: 'makes' in x).astype(int)
         pbp['shot'] = pbp[['home_miss', 'away_miss', 'home_make', 'away_make']].sum(axis = 1)
         pbp = pbp.copy()[pbp['shot'] == 1]
-    
-    
+
+
         # Store jump ball information
-        if rows[1].find('a', href = True) :
+        if rows[1].find('a', href = True) and jumpball_exists :
             jb_away, jb_home, jb_poss = [getId(x) for x in rows[1].find_all('a', href = True)]
             url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
             soup = BeautifulSoup(requests.get(url).content, 'lxml')
@@ -82,7 +81,7 @@ def get_first_basket(gameId) :
                 jb_poss_tm = away
         else :
             jb_away, jb_home, jb_poss, jb_poss_tm = None, None, None, None
-    
+
         # First basket information
         min, sec = np.array(pbp['Time'].values[-1].split(':')).astype(float)
         time_elapsed = 60 * (12 - min - 1) + (60 - sec)
@@ -92,7 +91,7 @@ def get_first_basket(gameId) :
         away_misses = pbp['away_miss'].sum()
         first_basket_tm = home * pbp['home_make'].values[-1] + away * pbp['away_make'].values[-1]
         first_basket = pbp['player'].values[-1]
-        
+
     else :
         first_basket, first_basket_tm = None, None
         time_elapsed, num_shots, pts_scored, home_misses, away_misses = None, None, None, None, None
@@ -116,39 +115,37 @@ def get_first_basket(gameId) :
                     'jumpball_away',
                     'jumpball_possession',
                     'jumpball_possession_tm'
-                ]
-            )
+                    ]
+                )
     
+seasons = [2023, 2019, 2018]
+for season in seasons :
+    url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
+    page = requests.get(url)
+    soup = BeautifulSoup(page.content, 'lxml')
+    month_urls = [x['href'] for x in soup.find_all('a', href = True) if 'games' in x['href'] 
+                    and any(m.lower() in x['href'] for m in months)]
 
-        
+    for m, month_url in enumerate(month_urls) :
 
+        games_monthly = get_monthly_games(month_url)
+        games_monthly['season'] = season
 
-url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
-page = requests.get(url)
-soup = BeautifulSoup(page.content, 'lxml')
-month_urls = [x['href'] for x in soup.find_all('a', href = True) if 'games' in x['href'] 
-                and any(m.lower() in x['href'] for m in months)]
+        first_basket_info = []
+        for i, gameId in enumerate(games_monthly['game_id'])  :
 
-for m, month_url in enumerate(month_urls) :
-
-    games_monthly = get_monthly_games(month_url)
-    games_monthly['season'] = season
-
-    first_basket_info = []
-    for i, gameId in enumerate(games_monthly['game_id'])  :
-
-        print(f'[{round(100*(i+1)/len(games_monthly))}%...] season :  {season-1}-{season}, month :  {month_url.split("-")[-1].split(".")[0]} ({gameId})')
-        sleep(5)
-        first_basket_info.append(get_first_basket(gameId))
+            print(f'[{round(100*(i+1)/len(games_monthly))}%...] season :  {season-1}-{season}, month :  {month_url.split("-")[-1].split(".")[0]} ({gameId})')
+            sleep(4)
+            first_basket_info.append(get_first_basket(gameId))
 
 
-    first_basket_df = pd.concat(first_basket_info)
-    first_basket_df = games_monthly.merge(first_basket_df, on = ['game_id', 'Home', 'Away'], how = 'inner')
-    if m == 0 :
-        first_basket_df.to_csv(f'data/first_basket_{season}.csv', index = False)
-    else :
-        first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
+        first_basket_df = pd.concat(first_basket_info)
+        first_basket_df = games_monthly.merge(first_basket_df, on = ['game_id', 'Home', 'Away'], how = 'inner')
+        if m == 0 :
+            first_basket_df.to_csv(f'data/first_basket_{season}.csv', index = False)
+        else :
+            first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
 
 
-with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-    env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
+# with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+#     env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
