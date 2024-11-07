@@ -118,7 +118,7 @@ def get_first_basket(gameId) :
                     ]
                 )
     
-seasons = [2022]
+seasons = [2021, 2020]
 for season in seasons :
     url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
     page = requests.get(url)
