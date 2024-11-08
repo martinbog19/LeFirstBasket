@@ -8,7 +8,7 @@ import calendar
 from time import sleep
 
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.simplefilter(action = 'ignore', category = FutureWarning)
 
 months = list(calendar.month_name)[1:]
 
@@ -21,6 +21,8 @@ def get_monthly_games(month_url) :
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'lxml')
     table = soup.find('table')
+    while table.find_all('tr', class_ = 'thead') :
+        table.find('tr', class_ = 'thead').decompose()
     games = pd.read_html(str(table))[0].rename(columns = {'Start (ET)': 'Time'})
     games['Date'] = pd.to_datetime(games['Date'])
     games['Home'] = [x['href'].split('/')[2] for x in table.find_all('a', href = True) if 'teams' in x['href']][1::2]
@@ -34,6 +36,8 @@ def get_first_basket(gameId) :
     
     url = f'https://www.basketball-reference.com/boxscores/pbp/{gameId}.html'
     page = requests.get(url)
+    if page.status_code == 429 :
+        raise ValueError('Rate limited...')
     soup = BeautifulSoup(page.content, 'lxml')
     away, home = [x['href'].split('/')[2] for x in soup.find_all('a', href = True) if 'teams' in x['href']][1:3]
     table = soup.find('table')
@@ -49,7 +53,9 @@ def get_first_basket(gameId) :
                             if re.search(r'\d+-\d+', x)
                             else np.nan)
         
-        jumpball_exists = 'Jump ball' in rows[1].text
+        jumpball_list = [('Jump ball' in row.text) and ('12:00' in row.find('td').text) for row in rows[:10]]
+        jumpball_exists = max(jumpball_list)
+        jumpball_idx = np.argmax(jumpball_list)
 
         n_actions_before_pts = (pbp['pts_scored'] > 0).argmax() + 1
 
@@ -71,8 +77,8 @@ def get_first_basket(gameId) :
 
 
         # Store jump ball information
-        if rows[1].find('a', href = True) and jumpball_exists :
-            jb_away, jb_home, jb_poss = [getId(x) for x in rows[1].find_all('a', href = True)]
+        if jumpball_exists and rows[jumpball_idx].find('a', href = True) :
+            jb_away, jb_home, jb_poss = [getId(x) for x in rows[jumpball_idx].find_all('a', href = True)]
             url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
             soup = BeautifulSoup(requests.get(url).content, 'lxml')
             if jb_poss in [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]] :
@@ -118,10 +124,12 @@ def get_first_basket(gameId) :
                     ]
                 )
     
-seasons = [2021]
+seasons = [2019]
 for season in seasons :
     url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
     page = requests.get(url)
+    if page.status_code == 429 :
+        raise ValueError('Rate limited...')
     soup = BeautifulSoup(page.content, 'lxml')
     month_urls = [x['href'] for x in soup.find_all('a', href = True) if 'games' in x['href'] 
                     and any(m.lower() in x['href'] for m in months)]
@@ -147,5 +155,5 @@ for season in seasons :
             first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
 
 
-with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-    env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
+# with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+#     env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
