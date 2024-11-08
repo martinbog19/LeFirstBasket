@@ -155,5 +155,5 @@ for season in seasons :
             first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
 
 
-# with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-#     env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
+with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+    env_file.write(f"FILENAME=data/first_basket_{season}.csv\n")
