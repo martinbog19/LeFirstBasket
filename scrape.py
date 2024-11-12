@@ -32,7 +32,8 @@ def get_monthly_games(month_url) :
     return games[['game_id', 'Date', 'Time', 'Home', 'Away']]
 
 
-def get_first_basket(gameId) :
+def get_first_basket(gameId,
+                     starting_lineups = False) :
     
     url = f'https://www.basketball-reference.com/boxscores/pbp/{gameId}.html'
     page = requests.get(url)
@@ -81,12 +82,26 @@ def get_first_basket(gameId) :
             jb_away, jb_home, jb_poss = [getId(x) for x in rows[jumpball_idx].find_all('a', href = True)]
             url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
             soup = BeautifulSoup(requests.get(url).content, 'lxml')
-            if jb_poss in [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]] :
+            starting_lineup_home = [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]]
+            starting_lineup_away = [getId(x) for x in soup.find('table', id = f'box-{away}-game-basic').find_all('a', href = True)[:5]]
+            if jb_poss in starting_lineup_home :
                 jb_poss_tm = home
-            else :
+            elif jb_poss in starting_lineup_away :
                 jb_poss_tm = away
+            else :
+                jb_poss_tm = None
+            if not starting_lineups :
+                starting_lineup_home, starting_lineup_away = None, None
         else :
             jb_away, jb_home, jb_poss, jb_poss_tm = None, None, None, None
+            if starting_lineups :
+                url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
+                soup = BeautifulSoup(requests.get(url).content, 'lxml')
+                starting_lineup_home = [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]]
+                starting_lineup_away = [getId(x) for x in soup.find('table', id = f'box-{away}-game-basic').find_all('a', href = True)[:5]]
+            else :
+                starting_lineup_home, starting_lineup_away = None, None
+
 
         # First basket information
         min, sec = np.array(pbp['Time'].values[-1].split(':')).astype(float)
@@ -122,37 +137,41 @@ def get_first_basket(gameId) :
                     'jumpball_possession',
                     'jumpball_possession_tm'
                     ]
-                )
-    
-seasons = [2017]
-for season in seasons :
-    url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
-    page = requests.get(url)
-    if page.status_code == 429 :
-        raise ValueError('Rate limited...')
-    soup = BeautifulSoup(page.content, 'lxml')
-    month_urls = [x['href'] for x in soup.find_all('a', href = True) if 'games' in x['href'] 
-                    and any(m.lower() in x['href'] for m in months)]
-
-    for m, month_url in enumerate(month_urls) :
-
-        games_monthly = get_monthly_games(month_url)
-        games_monthly['season'] = season
-
-        first_basket_info = []
-        for i, gameId in enumerate(games_monthly['game_id'])  :
-
-            print(f'[{round(100*(i+1)/len(games_monthly))}%...] season :  {season-1}-{season}, month :  {month_url.split("-")[-1].split(".")[0]} ({gameId})')
-            sleep(4)
-            first_basket_info.append(get_first_basket(gameId))
+                ), (starting_lineup_home, starting_lineup_away)
 
 
-        first_basket_df = pd.concat(first_basket_info)
-        first_basket_df = games_monthly.merge(first_basket_df, on = ['game_id', 'Home', 'Away'], how = 'inner')
-        if m == 0 :
-            first_basket_df.to_csv(f'data/first_basket_{season}.csv', index = False)
-        else :
-            first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
+if __name__ == "__main__":
+
+    months = list(calendar.month_name)[1:]
+    seasons = [2019]
+    for season in seasons :
+        url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
+        page = requests.get(url)
+        if page.status_code == 429 :
+            raise ValueError('Rate limited...')
+        soup = BeautifulSoup(page.content, 'lxml')
+        month_urls = [x['href'] for x in soup.find_all('a', href = True) if 'games' in x['href'] 
+                        and any(m.lower() in x['href'] for m in months)]
+
+        for m, month_url in enumerate(month_urls) :
+
+            games_monthly = get_monthly_games(month_url)
+            games_monthly['season'] = season
+
+            first_basket_info = []
+            for i, gameId in enumerate(games_monthly['game_id'])  :
+
+                print(f'[{round(100*(i+1)/len(games_monthly))}%...] season :  {season-1}-{season}, month :  {month_url.split("-")[-1].split(".")[0]} ({gameId})')
+                sleep(4)
+                first_basket_info.append(get_first_basket(gameId))
+
+
+            first_basket_df = pd.concat(first_basket_info)
+            first_basket_df = games_monthly.merge(first_basket_df, on = ['game_id', 'Home', 'Away'], how = 'inner')
+            if m == 0 :
+                first_basket_df.to_csv(f'data/first_basket_{season}.csv', index = False)
+            else :
+                first_basket_df.to_csv(f'data/first_basket_{season}.csv', mode = 'a', header = False, index = False)
 
 
 with open(os.environ['GITHUB_ENV'], 'a') as env_file:
