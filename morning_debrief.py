@@ -23,7 +23,7 @@ def predict_first_basket() :
 game_ids = [getId(x) for x in soup.find_all('a', href = True) if 'boxscores/pbp' in x['href']]
 dfs = []
 for gameId in game_ids :
-    sleep(3)
+    sleep(10)
     df, starting_lineups = get_first_basket(gameId, starting_lineups = True)
     idx = predict_first_basket()
     df['first_basket_pred'] = (starting_lineups[0] + starting_lineups[1])[idx]
