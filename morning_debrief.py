@@ -3,12 +3,13 @@ import numpy as np
 from bs4 import BeautifulSoup
 import requests
 from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
 from time import sleep
 
 from scrape import get_first_basket, getId
 
 
-yst = datetime.today() - timedelta(days = 1)
+yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
 
 print(yst)
 
