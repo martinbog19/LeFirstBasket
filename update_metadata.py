@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime, timezone
 
 from unidecode import unidecode
 import string
@@ -115,6 +116,8 @@ knn = KNeighborsRegressor(n_neighbors = 10)
 knn.fit(X_train, train['rating'])
 X_null = scaler.transform(null_ratings[knn_features])
 null_ratings['rating'] = knn.predict(X_null)
+
+players_ratings['insert_timestamp_utc'] = datetime.now(timezone.utc)
 
 players_ratings = (
     pd.concat([train, null_ratings])

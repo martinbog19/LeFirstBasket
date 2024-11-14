@@ -43,8 +43,11 @@ first_basket_df['correct_pred'] = (first_basket_df['first_basket'] == first_bask
 first_basket_df['correct_rand'] = (first_basket_df['first_basket'] == first_basket_df['first_basket_rand'])
 first_basket_df = first_basket_df[['Date', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_pred', 'correct_pred', 'first_basket_rand', 'correct_rand']]
 
-
-
+# Map id's to player names
+player_metadata = pd.read_csv('data/player_metadata.csv')
+playerId_map = dict(zip(player_metadata['player_id'], player_metadata['name']))
+for player_col in ['first_basket', 'first_basket_pred', 'first_basket_rand'] :
+    first_basket_df[player_col] = first_basket_df[player_col].map(playerId_map)
 
 acc_pred = first_basket_df['correct_pred'].mean()
 acc_rand = first_basket_df['correct_rand'].mean()
