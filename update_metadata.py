@@ -123,5 +123,8 @@ players_ratings = (
     pd.concat([train, null_ratings])
     [['player_id', 'name', 'name_norm', 'Team', 'rating', 'insert_timestamp_utc']]
     .sort_values('rating', ascending = False)
-    .to_csv('data/player_metadata.csv', index = False)
 )
+
+players_ratings['insert_timestamp_utc'] = datetime.now(timezone.utc)
+                            
+players_ratings.to_csv('data/player_metadata.csv', index = False)
