@@ -5,6 +5,10 @@ on:
     - cron: '0 14 * * *'
   workflow_dispatch:
 
+
+permissions:
+  contents: write
+
 jobs:
   update_metadata:
     runs-on: ubuntu-latest
@@ -32,7 +36,7 @@ jobs:
         git config --global user.email "github-actions@github.com"
         git add data/player_metadata.csv
         git commit -m "Update player metadata"
-        git push
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 
   morning_debrief:
     runs-on: ubuntu-latest
