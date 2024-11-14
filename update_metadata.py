@@ -121,7 +121,7 @@ players_ratings['insert_timestamp_utc'] = datetime.now(timezone.utc)
 
 players_ratings = (
     pd.concat([train, null_ratings])
-    [['player_id', 'name', 'name_norm', 'Team', 'rating', 'insert_timestamp_utc']]
+    [['player_id', 'name', 'name_norm', 'Team', 'rating']]
     .sort_values('rating', ascending = False)
 )
 
