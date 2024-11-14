@@ -11,7 +11,6 @@ from scrape import get_first_basket, getId
 
 yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
 
-print(yst)
 
 url = f'https://www.basketball-reference.com/boxscores/?month={yst.month}&day={yst.day}&year={yst.year}'
 page = requests.get(url)
@@ -29,11 +28,9 @@ def random_first_basket(starting_lineups) :
     idx = np.random.randint(0, 10)
     return players[idx]
 
-print(page.status_code)
 
 game_ids = [getId(x) for x in soup.find_all('a', href = True) if 'boxscores/pbp' in x['href']]
 
-print(len(game_ids), game_ids)
 dfs = []
 for i, gameId in enumerate(game_ids) :
     sleep(10)
