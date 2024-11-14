@@ -14,9 +14,17 @@ url = f'https://www.basketball-reference.com/boxscores/?month={yst.month}&day={y
 page = requests.get(url)
 soup = BeautifulSoup(page.content, 'lxml')
 
-def predict_first_basket() :
-    ######### starting_lineups #########
-    return np.random.randint(0, 10)
+def predict_first_basket(starting_lineups) :
+    players = (starting_lineups[0] + starting_lineups[1])
+    ratings = pd.read_csv('data/player_metadata.csv')
+    ratings = ratings.copy()[ratings['player_id'].isin(players)].sort_values('rating')
+    first_basket_pred = ratings['player_id'].values[-1]
+    return first_basket_pred
+
+def random_first_basket(starting_lineups) :
+    players = (starting_lineups[0] + starting_lineups[1])
+    idx = np.random.randint(0, 10)
+    return players[idx]
 
 
 
@@ -25,19 +33,22 @@ dfs = []
 for gameId in game_ids :
     sleep(10)
     df, starting_lineups = get_first_basket(gameId, starting_lineups = True)
-    idx = predict_first_basket()
-    df['first_basket_pred'] = (starting_lineups[0] + starting_lineups[1])[idx]
-    dfs.append(df[['game_id', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_pred']])
+    df['first_basket_rand'] = random_first_basket(starting_lineups)
+    df['first_basket_pred'] = predict_first_basket(starting_lineups)
+    dfs.append(df[['game_id', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_rand', 'first_basket_pred']])
 
 first_basket_df = pd.concat(dfs).set_index('game_id')
 first_basket_df['Date'] = yst.date()
 first_basket_df['correct_pred'] = (first_basket_df['first_basket'] == first_basket_df['first_basket_pred'])
-first_basket_df = first_basket_df[['Date', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_pred', 'correct_pred']]
+first_basket_df['correct_rand'] = (first_basket_df['first_basket'] == first_basket_df['first_basket_rand'])
+first_basket_df = first_basket_df[['Date', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_pred', 'correct_pred', 'first_basket_rand', 'correct_rand']]
 
 
 
 
-acc = first_basket_df['correct_pred'].mean()
+acc_pred = first_basket_df['correct_pred'].mean()
+acc_rand = first_basket_df['correct_rand'].mean()
 
-print(f'\nAccuracy: {round(100 * acc, 1)}%  [{first_basket_df["correct_pred"].sum()}/{first_basket_df.shape[0]}]\n\n')
+print(f'\nAccuracy predicted : {round(100 * acc_pred, 1)}%  [{first_basket_df["correct_pred"].sum()}/{first_basket_df.shape[0]}]\n')
+print(f'\nAccuracy random    : {round(100 * acc_rand, 1)}%  [{first_basket_df["correct_rand"].sum()}/{first_basket_df.shape[0]}]\n\n')
 print(first_basket_df, '\n\n\n')
