@@ -58,6 +58,6 @@ jobs:
 
     - name: Run Script Using CSV
       env:
-          API_KEY: ${{ secrets.GMAIL_APP_KEY }}
+          GMAIL_APP_KEY: ${{ secrets.GMAIL_APP_KEY }}
       run: python morning_debrief.py
 
