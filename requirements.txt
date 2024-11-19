@@ -6,3 +6,4 @@ lxml
 fuzzywuzzy
 scikit-learn
 unidecode
+pretty-html-table
