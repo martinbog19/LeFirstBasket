@@ -18,7 +18,7 @@ def send_email(results, receivers, subject = None) :
     # Set my email address and the password key
     my_mail = 'martinbog19@gmail.com'
     if os.getenv("GITHUB_ACTIONS") == "true" :
-        os.getenv('GMAIL_APP_KEY')
+        app_password = os.getenv('GMAIL_APP_KEY')
     else :
         with open('secrets/gmail_app_key.txt') as f:
             app_password = f.read()
@@ -26,11 +26,8 @@ def send_email(results, receivers, subject = None) :
     mail['Subject'] = subject
 
     # Send the email using Gmail's SMTP server
-    try:
-        with smtplib.SMTP("smtp.gmail.com", 587) as server:
-            server.starttls()  # Upgrade connection to secure
-            server.login(my_mail, app_password)  # Login with app password
-            server.sendmail(my_mail, receivers, mail.as_string())
-        print("Email sent successfully!")
-    except Exception as e:
-        print(f"Error sending email: {e}")
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.starttls()  # Upgrade connection to secure
+        server.login(my_mail, app_password)  # Login with app password
+        server.sendmail(my_mail, receivers, mail.as_string())
+    print("Email sent successfully!")
