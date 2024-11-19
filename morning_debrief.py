@@ -10,7 +10,7 @@ from scrape import get_first_basket, getId
 from send_email import send_email
 
 
-yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 2)
+yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
 
 
 url = f'https://www.basketball-reference.com/boxscores/?month={yst.month}&day={yst.day}&year={yst.year}'
@@ -62,4 +62,7 @@ print(first_basket_df, '\n\n\n')
 
 date = yst.strftime("%d %b %Y")
 synopsis = f'[{date}] Random model: {round(100 * acc_rand, 1)}% | Predicted model: {round(100 * acc_pred, 1)}%'
-send_email(first_basket_df, receivers = ['martinbog19@gmail.com'])
+
+send_email(first_basket_df,
+           receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
+           subject = synopsis)
