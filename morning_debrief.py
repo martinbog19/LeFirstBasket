@@ -7,9 +7,10 @@ from zoneinfo import ZoneInfo
 from time import sleep
 
 from scrape import get_first_basket, getId
+from send_email import send_email
 
 
-yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
+yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 2)
 
 
 url = f'https://www.basketball-reference.com/boxscores/?month={yst.month}&day={yst.day}&year={yst.year}'
@@ -58,3 +59,7 @@ acc_rand = first_basket_df['correct_rand'].mean()
 print(f'\nAccuracy predicted : {round(100 * acc_pred, 1)}%  [{first_basket_df["correct_pred"].sum()}/{first_basket_df.shape[0]}]\n')
 print(f'\nAccuracy random    : {round(100 * acc_rand, 1)}%  [{first_basket_df["correct_rand"].sum()}/{first_basket_df.shape[0]}]\n\n')
 print(first_basket_df, '\n\n\n')
+
+date = yst.strftime("%d %b %Y")
+synopsis = f'[{date}] Random model: {round(100 * acc_rand, 1)}% | Predicted model: {round(100 * acc_pred, 1)}%'
+send_email(first_basket_df, receivers = ['martinbog19@gmail.com'])
