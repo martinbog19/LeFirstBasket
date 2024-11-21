@@ -85,6 +85,7 @@ jobs:
 
     - name: Commit and Push YAML
       run: |
+        git pull
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add .github/workflows/schedule_today_games.yml
