@@ -92,4 +92,4 @@ jobs:
         git add .github/workflows/schedule_today_games.yml
         git add data/games.csv
         git commit -m "Update and write today's schedule"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+        git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
