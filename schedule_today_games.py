@@ -70,7 +70,7 @@ jobs:
 """
 
 # Save the workflow content to a .yml file
-with open(yml_path, "w") as f:
-    f.write(workflow_content)
+# with open(yml_path, "w") as f:
+#     f.write(workflow_content)
 
 print(f"Workflow file {yml_path} created successfully!")
