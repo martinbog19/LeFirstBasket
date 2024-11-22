@@ -69,7 +69,7 @@ jobs:
         run: python run_before_game.py
 """
 
-Save the workflow content to a .yml file
+# Save the workflow content to a .yml file
 with open(yml_path, "w") as f:
     f.write(workflow_content)
 
