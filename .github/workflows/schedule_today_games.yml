@@ -2,11 +2,11 @@ name: Run Script Before NBA Games
 
 on:
   schedule:
-    - cron: '30 18 25 11 *'
-    - cron: '0 19 25 11 *'
-    - cron: '30 19 25 11 *'
-    - cron: '30 20 25 11 *'
-    - cron: '30 21 25 11 *'
+    - cron: '30 18 26 11 *'
+    - cron: '0 19 26 11 *'
+    - cron: '30 19 26 11 *'
+    - cron: '30 20 26 11 *'
+    - cron: '30 21 26 11 *'
 
 jobs:
   run_script:
