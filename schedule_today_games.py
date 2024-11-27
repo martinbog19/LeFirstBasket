@@ -29,7 +29,7 @@ games['Time'] = (games['Date'].astype(str) + ' ' +  games['Time']).apply(lambda 
 games['game_id'] = games['Date'].apply(lambda x: datetime.strftime(x, "%Y%m%d")) + '0' + games['Home']
 games = games[['game_id', 'Date', 'Time', 'Home', 'Away']]
 games['insert_timestamp_utc'] = datetime.now(timezone.utc)
-games.to_csv('data/games.csv', index = None, mode = 'a')
+games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
 
 
 execute_crons = [datetime_to_cron(t - timedelta(minutes = 30)) for t in games['Time'].unique()]
