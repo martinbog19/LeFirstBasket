@@ -14,7 +14,6 @@ season = 2025
 today = datetime.now(ZoneInfo('America/New_York'))
 
 
-
 url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games-{today.strftime("%B").lower()}.html'
 page = requests.get(url)
 soup = BeautifulSoup(page.content, 'lxml')
