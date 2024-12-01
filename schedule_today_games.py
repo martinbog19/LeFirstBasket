@@ -5,17 +5,20 @@ import requests
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 import pytz
+import os
 import json
 
 
-def datetime_to_cron(dt):
-    return f"{dt.minute} {dt.hour} {dt.day} {dt.month} *"
+def datetime_to_cron_utc(t) :
+    t_et = pd.to_datetime(t).replace(tzinfo = pytz.timezone('US/Eastern'))
+    t_utc = t_et.astimezone(pytz.utc)
+    return f"{t_utc.minute} {t_utc.hour} {t_utc.day} {t_utc.month} *"
 
 
 season = 2025
 today = datetime.now(ZoneInfo('America/New_York'))
+tmrw_utc = (today + timedelta(days = 1)).astimezone(pytz.utc)
 
-api_key = 'a7bfde5bb651ac64e61f99c67631ef47'
 
 url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games-{today.strftime("%B").lower()}.html'
 page = requests.get(url)
@@ -32,31 +35,35 @@ games['Time'] = (games['Date'].astype(str) + ' ' +  games['Time']).apply(lambda 
 games['game_id'] = games['Date'].apply(lambda x: datetime.strftime(x, "%Y%m%d")) + '0' + games['Home']
 games = games[['game_id', 'Date', 'Time', 'Home', 'Away']]
 
-tmrw_utc = (today + timedelta(days = 1)).astimezone(pytz.utc)
+
+if os.getenv("GITHUB_ACTIONS") == "true" :
+  api_key = os.getenv('ODDS_API_KEY')
+else :
+  with open('secrets/odds_api_key.txt') as f:
+    api_key = f.read()
+
+with open('utils/odds_tm_map.json', 'r') as f :
+  odds_tm_map = json.load(f)
 
 events_response = requests.get(f'https://api.the-odds-api.com/v4/sports/basketball_nba/events',
                                params = {'apiKey': api_key,
                                          'commenceTimeTo': tmrw_utc.strftime('%Y-%m-%dT%H:%M:%SZ')})
 
+# Map odds API event_id to game_id
+odds = pd.DataFrame(events_response.json()).rename(columns = {'id': 'event_id'})
+odds['game_id'] = today.strftime('%Y%m%d') + '0' + odds['home_team'].map(odds_tm_map)
 
-events = pd.DataFrame(events_response.json()).rename(columns = {'id': 'event_id'})
-events['commence_time'] = pd.to_datetime(events['commence_time'])
-
-
-with open('utils/odds_tm_map.json', 'r') as file:
-    odds_tm_map = json.load(file)
-
-
-events['game_id'] = today.strftime("%Y%m%d") + '0' + events['home_team'].map(odds_tm_map)
-
-
-games = pd.merge(games, events[['game_id', 'event_id']], on = 'game_id')
+games = games.merge(
+    odds[['game_id', 'event_id']],
+    on = 'game_id',
+    how = 'left'
+)
 
 games['insert_timestamp_utc'] = datetime.now(timezone.utc)
-games.to_csv('data/games.csv', index = None, mode = 'w')
+games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
 
 
-execute_crons = [datetime_to_cron(t - timedelta(minutes = 30)) for t in games['Time'].unique()]
+execute_crons = [datetime_to_cron_utc(pd.to_datetime(t) - timedelta(minutes = 30)) for t in games['Time'].unique()]
 
 # .yml write path
 yml_path = ".github/workflows/schedule_today_games.yml"  # Output workflow file
