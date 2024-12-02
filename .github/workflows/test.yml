@@ -1,42 +1,22 @@
-name: Morning Debrief test
+name: Test WF
 
 on:
   workflow_dispatch:
 
-
-permissions:
-  contents: write
-
 jobs:
-
-  schedule_today_games:
+  run_script:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
-      with:
-        token: ${{ secrets.YML_TOKEN }}
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
 
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
 
-    - name: Run Scheduler Script
-      run: python schedule_today_games.py
-
-    - name: Commit and Push YAML
-      run: |
-        git status
-        git config --global user.name "github-actions"
-        git config --global user.email "github-actions@github.com"
-        git add data/games.csv
-        git add .github/workflows/schedule_today_games.yml
-        git commit -m "Update and write today's schedule"
-        git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+      - name: Run Before Game Script
+        run: python test.py
