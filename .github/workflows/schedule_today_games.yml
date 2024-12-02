@@ -25,4 +25,6 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Before Game Script
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run_before_game.py
