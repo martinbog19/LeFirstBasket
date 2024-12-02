@@ -84,6 +84,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run Scheduler Script
+      env:
+        GMAIL_APP_KEY: ${{ secrets.ODDS_API_KEY }}
       run: python schedule_today_games.py
 
     - name: Commit and Push YAML

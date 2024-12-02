@@ -3,7 +3,7 @@ import json
 
 
 if os.getenv("GITHUB_ACTIONS") == "true" :
-  api_key = os.getenv('ODDS_API_KEY')
+  api_key = os.environ.get('ODDS_API_KEY')
   print('GH')
 else :
   with open('secrets/odds_api_key.txt') as f:
