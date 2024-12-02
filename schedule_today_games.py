@@ -45,14 +45,12 @@ else :
 with open('utils/odds_tm_map.json', 'r') as f :
   odds_tm_map = json.load(f)
 
-print(api_key)
-
 events_response = requests.get(f'https://api.the-odds-api.com/v4/sports/basketball_nba/events',
                                params = {'apiKey': api_key,
                                          'commenceTimeTo': tmrw_utc.strftime('%Y-%m-%dT%H:%M:%SZ')})
 
 
-# assert events_response.status_code == 200, f'Odds API query not successful {events_response.status_code}'
+assert events_response.status_code == 200, f'Odds API query not successful {events_response.status_code}'
 
 # Map odds API event_id to game_id
 odds = pd.DataFrame(events_response.json()).rename(columns = {'id': 'event_id'})

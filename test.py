@@ -11,5 +11,3 @@ else :
 
 with open('utils/odds_tm_map.json', 'r') as f :
   odds_tm_map = json.load(f)
-
-print(api_key)
