@@ -85,7 +85,7 @@ jobs:
 
     - name: Run Scheduler Script
       env:
-        GMAIL_APP_KEY: ${{ secrets.ODDS_API_KEY }}
+        ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       run: python schedule_today_games.py
 
     - name: Commit and Push YAML
