@@ -2,7 +2,7 @@ name: Run Script Before NBA Games
 
 on:
   schedule:
-    - cron: '30 23 3 12 *'
+    - cron: '52 23 3 12 *'
     - cron: '0 0 4 12 *'
     - cron: '30 0 4 12 *'
     - cron: '0 1 4 12 *'

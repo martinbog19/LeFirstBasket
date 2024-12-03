@@ -18,7 +18,7 @@ with open('utils/odds_tm_map.json', 'r') as f :
 
 
 games = pd.read_csv('data/games.csv')
-
+games['Time'] = pd.to_datetime(games['Time'])
 
 # Store subset of games in the next 30 minutes
 now = datetime.now(ZoneInfo('America/New_York'))
