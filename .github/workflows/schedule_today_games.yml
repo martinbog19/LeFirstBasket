@@ -2,12 +2,8 @@ name: Run Script Before NBA Games
 
 on:
   schedule:
-    - cron: '0 20 1 12 *'
-    - cron: '30 22 1 12 *'
-    - cron: '30 23 1 12 *'
-    - cron: '30 0 2 12 *'
-    - cron: '30 1 2 12 *'
-    - cron: '30 2 2 12 *'
+    - cron: '0 0 3 12 *'
+    - cron: '30 0 3 12 *'
 
 jobs:
   run_script:
@@ -25,6 +21,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Before Game Script
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run_before_game.py
