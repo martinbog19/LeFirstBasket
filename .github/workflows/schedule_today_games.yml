@@ -29,3 +29,12 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run_before_game.py
+
+      - name: Commit and Push CSV
+        run: |
+          git pull
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add data/odds_first_basket.csv
+          git commit -m "Adding odds data"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
