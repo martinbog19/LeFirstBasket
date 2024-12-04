@@ -18,11 +18,10 @@ with open('utils/odds_tm_map.json', 'r') as f :
 
 
 games = pd.read_csv('data/games.csv')
-games['Time'] = pd.to_datetime(games['Time'])
 
 # Store subset of games in the next 30 minutes
 now = datetime.now(ZoneInfo('America/New_York'))
-games_now = games[(games['Time'] > now) & (games['Time'] <= now + timedelta(minutes = 30))]
+games_now = games[(games['Time'] > now.strftime('%Y-%m-%d %H:%M:%S')) & (games['Time'] <= (now + timedelta(minutes = 30)).strftime('%Y-%m-%d %H:%M:%S'))]
 
 # Iterate through games
 for _, game in games_now.iterrows() :
