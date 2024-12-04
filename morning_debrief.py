@@ -37,12 +37,15 @@ for i, gameId in enumerate(game_ids) :
     sleep(10)
     print(f'[{i+1}/{len(game_ids)}] {gameId}')
     df, starting_lineups = get_first_basket(gameId, starting_lineups = True)
+    df.insert(1, 'Date', yst.date())
+    df.insert(2, 'Time', np.nan)
+    df.insert(5, 'season', 2025)
+    df.to_csv('data/first_basket_2025.csv', index = False, header = False, mode = 'a')
     df['first_basket_rand'] = random_first_basket(starting_lineups)
     df['first_basket_pred'] = predict_first_basket(starting_lineups)
-    dfs.append(df[['game_id', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_rand', 'first_basket_pred']])
+    dfs.append(df[['game_id', 'Date', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_rand', 'first_basket_pred']])
 
 first_basket_df = pd.concat(dfs).set_index('game_id')
-first_basket_df['Date'] = yst.date()
 first_basket_df['correct_pred'] = (first_basket_df['first_basket'] == first_basket_df['first_basket_pred'])
 first_basket_df['correct_rand'] = (first_basket_df['first_basket'] == first_basket_df['first_basket_rand'])
 first_basket_df = first_basket_df[['Date', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_pred', 'correct_pred', 'first_basket_rand', 'correct_rand']]

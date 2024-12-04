@@ -142,8 +142,9 @@ def get_first_basket(gameId,
 
 if __name__ == "__main__":
 
-    months = list(calendar.month_name)[1:]
-    seasons = [2019]
+    # months = list(calendar.month_name)[1:]
+    months = ['october', 'november']
+    seasons = [2025]
     for season in seasons :
         url = f'https://www.basketball-reference.com/leagues/NBA_{season}_games.html'
         page = requests.get(url)
@@ -162,7 +163,7 @@ if __name__ == "__main__":
             for i, gameId in enumerate(games_monthly['game_id'])  :
 
                 print(f'[{round(100*(i+1)/len(games_monthly))}%...] season :  {season-1}-{season}, month :  {month_url.split("-")[-1].split(".")[0]} ({gameId})')
-                sleep(4)
+                sleep(5)
                 first_basket_info.append(get_first_basket(gameId))
 
 

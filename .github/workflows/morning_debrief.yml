@@ -62,6 +62,15 @@ jobs:
           GMAIL_APP_KEY: ${{ secrets.GMAIL_APP_KEY }}
       run: python morning_debrief.py
 
+    - name: Commit and Push CSV
+      run: |
+        git pull
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add data/first_basket_2025.csv
+        git commit -m "Update first basket table"
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+
 
   schedule_today_games:
     runs-on: ubuntu-latest
