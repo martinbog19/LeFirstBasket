@@ -317,3 +317,9 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412030PHO,2024-12-03,,PHO,SAS,2025,bookede01,PHO,23.0,1,2.0,0,0,ighodos01,wembavi01,bealbr01,PHO
 202412030SAC,2024-12-03,,SAC,HOU,2025,sengual01,HOU,43.0,3,2.0,1,1,sabondo01,sengual01,greenja05,HOU
 202412030TOR,2024-12-03,,TOR,IND,2025,agbajoc01,TOR,66.0,4,2.0,2,1,poeltja01,turnemy01,barrerj01,TOR
+202412040BOS,2024-12-04,,BOS,DET,2025,porzikr01,BOS,66.0,3,2.0,1,1,porzikr01,durenja01,cunnica01,DET
+202412040BRK,2024-12-04,,BRK,IND,2025,siakapa01,IND,42.0,1,2.0,0,0,claxtni01,turnemy01,schrode01,BRK
+202412040LAC,2024-12-04,,LAC,MIN,2025,randlju01,MIN,44.0,2,2.0,1,0,zubaciv01,goberru01,jonesde02,LAC
+202412040MIA,2024-12-04,,MIA,LAL,2025,jamesle01,LAL,39.0,2,2.0,1,0,adebaba01,davisan02,butleji01,MIA
+202412040MIL,2024-12-04,,MIL,ATL,2025,antetgi01,MIL,13.0,2,1.0,1,0,lopezbr01,capelca01,antetgi01,MIL
+202412040PHI,2024-12-04,,PHI,ORL,2025,martike04,PHI,94.0,6,2.0,2,3,yabusgu01,bitadgo01,wagnefr01,ORL
