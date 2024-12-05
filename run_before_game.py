@@ -16,7 +16,6 @@ else :
 with open('utils/odds_tm_map.json', 'r') as f :
   odds_tm_map = json.load(f)
 
-
 games = pd.read_csv('data/games.csv')
 
 # Store subset of games in the next 30 minutes
