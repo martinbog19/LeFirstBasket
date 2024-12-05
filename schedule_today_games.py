@@ -99,7 +99,18 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Before Game Script
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run_before_game.py
+
+      - name: Commit and Push YAML
+      run: |
+        git pull
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add 'data/odds_first_basket.csv'
+        git commit -m "Write new odds"
+        git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 """
 
 # Save the workflow content to a .yml file
