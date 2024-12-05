@@ -2,9 +2,10 @@ name: Run Script Before NBA Games
 
 on:
   schedule:
-    - cron: '0 0 5 12 *'
-    - cron: '30 0 5 12 *'
-    - cron: '0 3 5 12 *'
+    - cron: '30 23 5 12 *'
+    - cron: '0 0 6 12 *'
+    - cron: '30 0 6 12 *'
+    - cron: '30 2 6 12 *'
 
 jobs:
   run_script:
@@ -22,16 +23,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Before Game Script
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python run_before_game.py
-
-      - name: Commit and Push YAML
-        run: |
-          git pull
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add 'data/odds_first_basket.csv'
-          git add .github/workflows/schedule_today_games.yml
-          git commit -m "Update and write today's schedule"
-          git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
