@@ -68,7 +68,7 @@ jobs:
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add data/first_basket_2025.csv
-        git add data/rosters_2025.csv
+        git add data/rosters.nosync/rosters_2025.csv
         git commit -m "Update first basket and rosters table"
         git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 
