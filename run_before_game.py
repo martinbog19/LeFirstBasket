@@ -21,12 +21,13 @@ games = pd.read_csv('data/games.csv')
 # Store subset of games in the next 30 minutes
 now = datetime.now(ZoneInfo('America/New_York'))
 games_now = games[(games['Time'] > now.strftime('%Y-%m-%d %H:%M:%S')) & (games['Time'] <= (now + timedelta(minutes = 30)).strftime('%Y-%m-%d %H:%M:%S'))]
+print(games_now.shape)
 
 # Iterate through games
 for _, game in games_now.iterrows() :
 
     eventId = game['event_id']
-    print(f'Querying game {game['game_id']}...')
+    print(f'Querying game {game["game_id"]}...')
 
     odds_response = requests.get(f'https://api.the-odds-api.com/v4/sports/basketball_nba/events/{eventId}/odds',
                              params = {'apiKey': api_key,
