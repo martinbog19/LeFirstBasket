@@ -32,8 +32,7 @@ def get_monthly_games(month_url) :
     return games[['game_id', 'Date', 'Time', 'Home', 'Away']]
 
 
-def get_first_basket(gameId,
-                     starting_lineups = False) :
+def get_first_basket(gameId) :
     
     url = f'https://www.basketball-reference.com/boxscores/pbp/{gameId}.html'
     page = requests.get(url)
@@ -76,31 +75,27 @@ def get_first_basket(gameId,
         pbp['shot'] = pbp[['home_miss', 'away_miss', 'home_make', 'away_make']].sum(axis = 1)
         pbp = pbp.copy()[pbp['shot'] == 1]
 
+        # Starting lineups
+        sleep(3)
+        url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
+        soup = BeautifulSoup(requests.get(url).content, 'lxml')
+        starting_lineup_home = [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]]
+        starting_lineup_away = [getId(x) for x in soup.find('table', id = f'box-{away}-game-basic').find_all('a', href = True)[:5]]
+
 
         # Store jump ball information
         if jumpball_exists and rows[jumpball_idx].find('a', href = True) :
             jb_away, jb_home, jb_poss = [getId(x) for x in rows[jumpball_idx].find_all('a', href = True)]
-            url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
-            soup = BeautifulSoup(requests.get(url).content, 'lxml')
-            starting_lineup_home = [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]]
-            starting_lineup_away = [getId(x) for x in soup.find('table', id = f'box-{away}-game-basic').find_all('a', href = True)[:5]]
             if jb_poss in starting_lineup_home :
                 jb_poss_tm = home
             elif jb_poss in starting_lineup_away :
                 jb_poss_tm = away
             else :
                 jb_poss_tm = None
-            if not starting_lineups :
-                starting_lineup_home, starting_lineup_away = None, None
+
         else :
             jb_away, jb_home, jb_poss, jb_poss_tm = None, None, None, None
-            if starting_lineups :
-                url = f'https://www.basketball-reference.com/boxscores/{gameId}.html'
-                soup = BeautifulSoup(requests.get(url).content, 'lxml')
-                starting_lineup_home = [getId(x) for x in soup.find('table', id = f'box-{home}-game-basic').find_all('a', href = True)[:5]]
-                starting_lineup_away = [getId(x) for x in soup.find('table', id = f'box-{away}-game-basic').find_all('a', href = True)[:5]]
-            else :
-                starting_lineup_home, starting_lineup_away = None, None
+
 
 
         # First basket information

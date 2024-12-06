@@ -5,58 +5,11 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone
 
-from unidecode import unidecode
-import string
+from helpers.scrape import get_ratings, get_players
 from fuzzywuzzy import process
-from scrape import getId
 
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import StandardScaler
-
-
-def normalize_name(x) :
-
-    for suffix in [' Jr.', ' Sr.', ' III', ' II', ' IV', ' Jr', ' Sr'] :
-        x = x.replace(suffix, '')
-    x = x.translate(str.maketrans('', '', string.punctuation))
-
-    return unidecode(x).lower()
-
-def get_ratings(year) :
-
-    url = f'https://hoopshype.com/nba2k/{year-1}-{year}/'
-    page = requests.get(url)
-    soup = BeautifulSoup(page.content, 'html')
-    table = soup.find('table')
-    ratings = pd.read_html(str(table))[0]
-    ratings.columns = ['drop', 'name', 'rating']
-    ratings = ratings.drop(columns = 'drop')
-    ratings['name_norm'] = ratings['name'].apply(normalize_name)
-    ratings = ratings[['name_norm', 'rating']]
-
-    return ratings
-
-def get_players(year) :
-
-    url = f'https://www.basketball-reference.com/leagues/NBA_{year}_per_game.html'
-    page = requests.get(url)
-    soup = BeautifulSoup(page.content, 'lxml')
-    table = soup.find('table')
-    while table.find_all('tr', class_ = 'thead') :
-        table.find('tr', class_ = 'thead')
-    try :
-        table.find('tr', class_ = 'norank').decompose()
-    except :
-        pass
-
-    players = pd.read_html(str(table))[0].rename(columns = {'Player': 'name'})
-    players['name_norm'] = players['name'].apply(normalize_name)
-    players['player_id'] = [getId(x) for x in table.find_all('a', href = True) if 'players' in x['href']]
-    players = players.copy()[players['GS'] > 0]
-    # Need to do something about players on multiple teams!!!!!!
-    players = players.drop_duplicates().reset_index(drop = True)
-
-    return players
 
 def manual_rating(row, hardcoded_players) :
 
@@ -102,7 +55,7 @@ players_ratings['rating'] = players_ratings.apply(manual_rating, axis = 1, args 
 null_ratings = players_ratings.copy()[players_ratings['rating'].isna()]
 choices = ratings['name_norm'].tolist()
 suggested_map = {name: process.extractOne(name, choices)[0] for name in null_ratings['name_norm']}
-with open('utils/name_map_suggestions_2k.json', 'w') as f:
+with open('utils/name_map_suggestions_2k.json', 'w') as f :
     json.dump(suggested_map, f)
 
 # Impute still missing with kNN

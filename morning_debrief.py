@@ -6,8 +6,9 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from time import sleep
 
-from scrape import get_first_basket, getId
-from send_email import send_email
+from helpers.scrape import get_first_basket, get_roster
+from helpers.utils import getId
+from helpers.email import send_email
 
 
 yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
@@ -34,7 +35,7 @@ game_ids = [getId(x) for x in soup.find_all('a', href = True) if 'boxscores/pbp'
 
 dfs = []
 for i, gameId in enumerate(game_ids) :
-    sleep(10)
+    sleep(5)
     print(f'[{i+1}/{len(game_ids)}] {gameId}')
     df, starting_lineups = get_first_basket(gameId, starting_lineups = True)
     df.insert(1, 'Date', yst.date())
@@ -44,6 +45,9 @@ for i, gameId in enumerate(game_ids) :
     df['first_basket_rand'] = random_first_basket(starting_lineups)
     df['first_basket_pred'] = predict_first_basket(starting_lineups)
     dfs.append(df[['game_id', 'Date', 'Home', 'Away', 'first_basket', 'first_basket_tm', 'first_basket_rand', 'first_basket_pred']])
+    sleep(5)
+    roster = get_roster(gameId)
+    roster.to_csv('data/rosters.nosync/rosters_2025.csv', index = None, header = None, mode = 'a')
 
 first_basket_df = pd.concat(dfs).set_index('game_id')
 first_basket_df['correct_pred'] = (first_basket_df['first_basket'] == first_basket_df['first_basket_pred'])

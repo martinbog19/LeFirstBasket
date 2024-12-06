@@ -1,9 +1,3 @@
 # LeFirstBasket
 
-## TODO
-
-- scrape first basket data
-- EDA
-- create ML model
-- betting odds API
-- test strategies (ML, favorite, random)
+Can we predict who will score the first basket during NBA games -- and make money out of it?
