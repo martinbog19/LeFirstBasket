@@ -323,3 +323,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412040MIA,2024-12-04,,MIA,LAL,2025,jamesle01,LAL,39.0,2,2.0,1,0,adebaba01,davisan02,butleji01,MIA
 202412040MIL,2024-12-04,,MIL,ATL,2025,antetgi01,MIL,13.0,2,1.0,1,0,lopezbr01,capelca01,antetgi01,MIL
 202412040PHI,2024-12-04,,PHI,ORL,2025,martike04,PHI,94.0,6,2.0,2,3,yabusgu01,bitadgo01,wagnefr01,ORL
+202412050CLE,2024-12-05,,CLE,DEN,2025,jokicni01,DEN,16.0,2,2.0,0,1,allenja01,jokicni01,gordoaa01,DEN
+202412050GSW,2024-12-05,,GSW,HOU,2025,kuminjo01,GSW,38.0,2,2.0,0,1,looneke01,sengual01,brookdi01,HOU
+202412050MEM,2024-12-05,,MEM,SAC,2025,moranja01,MEM,15.0,1,2.0,0,0,jacksja02,sabondo01,clarkbr01,MEM
+202412050NOP,2024-12-05,,NOP,PHO,2025,ingrabr01,NOP,19.0,1,1.0,0,0,missiyv01,plumlma01,murrade01,NOP
+202412050NYK,2024-12-05,,NYK,CHO,2025,hartjo01,NYK,60.0,3,2.0,1,1,townska01,richani01,hartjo01,NYK
+202412050SAS,2024-12-05,,SAS,CHI,2025,lavinza01,CHI,16.0,1,3.0,0,0,sochaje01,vucevni01,dosunay01,CHI
+202412050TOR,2024-12-05,,TOR,OKC,2025,barnesc01,TOR,38.0,3,3.0,1,1,fernabr01,harteis01,barrerj01,TOR
+202412050WAS,2024-12-05,,WAS,DAL,2025,doncilu01,DAL,53.0,3,3.0,1,1,sarral01,livelde01,washipj01,DAL
