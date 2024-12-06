@@ -37,7 +37,7 @@ dfs = []
 for i, gameId in enumerate(game_ids) :
     sleep(5)
     print(f'[{i+1}/{len(game_ids)}] {gameId}')
-    df, starting_lineups = get_first_basket(gameId, starting_lineups = True)
+    df, starting_lineups = get_first_basket(gameId)
     df.insert(1, 'Date', yst.date())
     df.insert(2, 'Time', np.nan)
     df.insert(5, 'season', 2025)
