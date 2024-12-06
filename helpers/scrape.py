@@ -3,6 +3,9 @@ import requests
 from bs4 import BeautifulSoup
 import numpy as np
 import os
+import re
+
+
 from time import sleep
 from .utils import getId, normalize_name
 
