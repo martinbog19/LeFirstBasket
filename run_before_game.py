@@ -26,6 +26,7 @@ games_now = games[(games['Time'] > now.strftime('%Y-%m-%d %H:%M:%S')) & (games['
 for _, game in games_now.iterrows() :
 
     eventId = game['event_id']
+    print(f'Querying game {game['game_id']}...')
 
     odds_response = requests.get(f'https://api.the-odds-api.com/v4/sports/basketball_nba/events/{eventId}/odds',
                              params = {'apiKey': api_key,
@@ -33,13 +34,14 @@ for _, game in games_now.iterrows() :
                                        'markets': 'player_first_basket',
                                        'oddsFormat': 'decimal'})
     
-
     bm_dfs = [pd.DataFrame(columns = ['name', 'price', 'bookmaker', 'update_time'])]
     for bookmaker in odds_response.json()['bookmakers'] :
         
         bm_df = pd.DataFrame(bookmaker['markets'][0]['outcomes'])
         bm_df['bookmaker'] = bookmaker['key']
         bm_df['update_time'] = bookmaker['markets'][0]['last_update']
+
+        print(f'Found {len(bm_df)} lines from {bookmaker}')
 
         bm_dfs.append(
             bm_df
