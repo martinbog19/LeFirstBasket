@@ -36,13 +36,18 @@ for _, game in games_now.iterrows() :
                                        'oddsFormat': 'decimal'})
     
     bm_dfs = [pd.DataFrame(columns = ['name', 'price', 'bookmaker', 'update_time'])]
+
+
+    print(odds_response)
+
+
     for bookmaker in odds_response.json()['bookmakers'] :
         
         bm_df = pd.DataFrame(bookmaker['markets'][0]['outcomes'])
         bm_df['bookmaker'] = bookmaker['key']
         bm_df['update_time'] = bookmaker['markets'][0]['last_update']
 
-        print(f'Found {len(bm_df)} lines from {bookmaker}')
+        print(f'Found {len(bm_df)} lines from {bookmaker["key"]}')
 
         bm_dfs.append(
             bm_df
