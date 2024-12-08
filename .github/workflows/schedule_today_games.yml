@@ -11,6 +11,7 @@ on:
     - cron: '0 1 9 12 *'
     - cron: '30 1 9 12 *'
     - cron: '0 2 9 12 *'
+  workflow_dispatch:
 
 jobs:
   run_script:
