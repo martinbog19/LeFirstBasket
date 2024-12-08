@@ -82,7 +82,7 @@ on:
 for cron in execute_crons :
     workflow_content += f"    - cron: '{cron}'\n"
 
-workflow_content += f"""
+workflow_content += """
 jobs:
   run_script:
     runs-on: ubuntu-latest
