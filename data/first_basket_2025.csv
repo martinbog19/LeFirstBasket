@@ -338,3 +338,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412060PHI,2024-12-06,,PHI,ORL,2025,georgpa01,PHI,20.0,1,2.0,0,0,drumman01,bitadgo01,yabusgu01,PHI
 202412060POR,2024-12-06,,POR,UTA,2025,sextoco01,UTA,43.0,2,2.0,1,0,aytonde01,kesslwa01,grantje01,POR
 202412060SAS,2024-12-06,,SAS,SAC,2025,foxde01,SAC,12.0,1,2.0,0,0,colliza01,sabondo01,foxde01,SAC
+202412070BOS,2024-12-07,,BOS,MEM,2025,banede01,MEM,49.0,2,2.0,1,0,porzikr01,jacksja02,banede01,MEM
+202412070CHO,2024-12-07,,CHO,CLE,2025,mobleev01,CLE,43.0,2,2.0,1,0,gibsota01,allenja01,micicva01,CHO
+202412070MIA,2024-12-07,,MIA,PHO,2025,robindu01,MIA,22.0,1,3.0,0,0,adebaba01,plumlma01,butleji01,MIA
+202412070NOP,2024-12-07,,NOP,OKC,2025,gilgesh01,OKC,32.0,2,2.0,1,0,missiyv01,harteis01,gilgesh01,OKC
+202412070NYK,2024-12-07,,NYK,DET,2025,hardati02,DET,25.0,2,3.0,1,0,simsje01,durenja01,anunoog01,NYK
+202412070TOR,2024-12-07,,TOR,DAL,2025,doncilu01,DAL,44.0,2,2.0,1,0,poeltja01,livelde01,barnesc01,TOR
+202412070WAS,2024-12-07,,WAS,DEN,2025,watsope01,DEN,69.0,4,2.0,3,0,valanjo01,jokicni01,poolejo01,WAS
