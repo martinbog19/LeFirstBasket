@@ -16,15 +16,11 @@ else :
 with open('utils/odds_tm_map.json', 'r') as f :
   odds_tm_map = json.load(f)
 
-
-print(os.getenv("GITHUB_ACTIONS"), api_key)
-
 games = pd.read_csv('data/games.csv')
 
 # Store subset of games in the next 30 minutes
 now = datetime.now(ZoneInfo('America/New_York'))
 games_now = games[(games['Time'] > now.strftime('%Y-%m-%d %H:%M:%S')) & (games['Time'] <= (now + timedelta(minutes = 30)).strftime('%Y-%m-%d %H:%M:%S'))]
-print(games_now.shape)
 
 # Iterate through games
 for _, game in games_now.iterrows() :
@@ -50,7 +46,7 @@ for _, game in games_now.iterrows() :
         bm_df['bookmaker'] = bookmaker['key']
         bm_df['update_time'] = bookmaker['markets'][0]['last_update']
 
-        print(f'Found {len(bm_df)} lines from {bookmaker["key"]}')
+        print(f'\tFound {len(bm_df)} lines from {bookmaker["key"]}')
 
         bm_dfs.append(
             bm_df
