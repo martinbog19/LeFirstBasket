@@ -6,7 +6,6 @@ import os
 import json
 
 
-
 if os.getenv("GITHUB_ACTIONS") == "true" :
   api_key = os.getenv('ODDS_API_KEY')
 else :
@@ -20,6 +19,7 @@ games = pd.read_csv('data/games.csv')
 
 # Store subset of games in the next 30 minutes
 now = datetime.now(ZoneInfo('America/New_York'))
+print(now.strftime('%H:%M:%S'))
 games_now = games[(games['Time'] > now.strftime('%Y-%m-%d %H:%M:%S')) & (games['Time'] <= (now + timedelta(minutes = 30)).strftime('%Y-%m-%d %H:%M:%S'))]
 
 # Iterate through games
