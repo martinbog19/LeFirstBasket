@@ -5,6 +5,8 @@ import requests
 import os
 import json
 
+from helpers.email import send_email
+
 
 if os.getenv("GITHUB_ACTIONS") == "true" :
   api_key = os.getenv('ODDS_API_KEY')
@@ -12,15 +14,18 @@ else :
   with open('secrets/odds_api_key.txt') as f:
     api_key = f.read()
 
+start_time = int(os.getenv("START_TIME"))
+
 with open('utils/odds_tm_map.json', 'r') as f :
   odds_tm_map = json.load(f)
 
 games = pd.read_csv('data/games.csv')
 
 # Store subset of games in the next 30 minutes
-now = datetime.now(ZoneInfo('America/New_York'))
+now = datetime.today()
+today_dt = now.replace(hour = 0, minute = 0, second = 0, microsecond = 0)
 print(now.strftime('%H:%M:%S'))
-games_now = games[(games['Time'] > now.strftime('%Y-%m-%d %H:%M:%S')) & (games['Time'] <= (now + timedelta(minutes = 30)).strftime('%Y-%m-%d %H:%M:%S'))]
+games_now = games[(games['Time'] >= now.strftime(f'%Y-%m-%d')  + f'{start_time}:%00:%00') & (games['Time'] < now.strftime(f'%Y-%m-%d')  + f'{start_time+3}:%00:%00')]
 
 # Iterate through games
 for _, game in games_now.iterrows() :
@@ -60,3 +65,9 @@ for _, game in games_now.iterrows() :
 
     game_df['insert_timestamp_utc'] = datetime.now(timezone.utc)
     game_df.to_csv('data/odds_first_basket.csv', index = None, header = None, mode = 'a')
+
+    subject = f'[LeFirstBasket | {now.strftime("%d %b %Y")}] Successfully scraped {game["game_id"]}!'
+    
+    send_email(game_df[['name', 'price', 'bookmaker', 'update_time']],
+               receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
+               subject = subject)

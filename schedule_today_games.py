@@ -66,7 +66,15 @@ games['insert_timestamp_utc'] = datetime.now(timezone.utc)
 games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
 
 
-execute_crons = [datetime_to_cron_utc(pd.to_datetime(t) - timedelta(minutes = 30)) for t in games['Time'].unique()]
+today_dt = today.replace(hour = 0, minute = 0, second = 0, microsecond = 0, tzinfo = None)
+time_bins = [today_dt + timedelta(hours = int(hr)) for hr in np.arange(10, 30, 3)]
+
+games['left_dt'] = pd.cut(pd.to_datetime(games['Time']), time_bins, labels = time_bins[:-1], right = False)
+
+left_dt_et = pd.to_datetime(games['left_dt'].sort_values().unique())
+left_hr_et = [t.hour for t in left_dt_et]
+execute_crons = [datetime_to_cron_utc(t) for t in left_dt_et - timedelta(hours = 1)]
+
 
 # .yml write path
 yml_path = ".github/workflows/schedule_today_games.yml"  # Output workflow file
@@ -78,9 +86,10 @@ on:
   schedule:
 """
 
-# Add all calculated cron expressions to the workflow
-for cron in execute_crons :
-    workflow_content += f"    - cron: '{cron}'\n"
+for cron, left_hr in zip(execute_crons, left_hr_et) :
+    workflow_content += f"""
+    - cron: '{cron}'
+    """
 
 workflow_content += """
 jobs:
@@ -93,7 +102,7 @@ jobs:
       - name: Set Up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.x'
 
       - name: Install Dependencies
         run: pip install -r requirements.txt
@@ -101,7 +110,8 @@ jobs:
       - name: Run Before Game Script
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python run_before_game.py
+          START_TIME: ${{ matrix.start_time }}
+        run: python run_before_game.py --start-time $START_TIME
 
       - name: Commit and Push YAML
         run: |
@@ -111,7 +121,18 @@ jobs:
           git add 'data/odds_first_basket.csv'
           git commit -m "Write new odds"
           git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+
+    strategy:
+      matrix:
+        include:
 """
+
+for cron, left_hr in zip(execute_crons, left_hr_et) :
+    
+    workflow_content += f"""
+          - cron: '{cron}'
+            start_time: '{left_hr}'
+    """
 
 # Save the workflow content to a .yml file
 with open(yml_path, "w") as f:

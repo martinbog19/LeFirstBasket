@@ -68,7 +68,7 @@ print(f'\nAccuracy random    : {round(100 * acc_rand, 1)}%  [{first_basket_df["c
 print(first_basket_df, '\n\n\n')
 
 date = yst.strftime("%d %b %Y")
-synopsis = f'[{date}] Random model: {round(100 * acc_rand, 1)}% | Predicted model: {round(100 * acc_pred, 1)}%'
+synopsis = f'[LeFirstBasket | {date}] Random model: {round(100 * acc_rand, 1)}% | Predicted model: {round(100 * acc_pred, 1)}%'
 
 send_email(first_basket_df,
            receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
