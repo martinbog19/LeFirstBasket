@@ -4,6 +4,8 @@ on:
   schedule:
 
     - cron: '0 23 10 12 *'
+
+  workflow_dispatch:
     
 jobs:
   run_script:
