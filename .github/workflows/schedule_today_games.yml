@@ -3,7 +3,7 @@ name: Run Script Before NBA Games
 on:
   schedule:
 
-    - cron: '0 23 10 12 *'
+    - cron: '0 23 11 12 *'
     
 jobs:
   run_script:
@@ -39,6 +39,6 @@ jobs:
       matrix:
         include:
 
-          - cron: '0 23 10 12 *'
+          - cron: '0 23 11 12 *'
             start_time: '19'
     

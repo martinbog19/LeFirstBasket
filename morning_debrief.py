@@ -10,7 +10,7 @@ import pickle
 from helpers.scrape import get_first_basket, get_roster
 from helpers.preprocess import feature_engineering
 from helpers.utils import getId
-from helpers.email import send_email
+# from helpers.email import send_email
 
 
 yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
@@ -94,6 +94,7 @@ with open('models/model_rf.pkl', "rb") as f:
 y_pred = model.predict_proba(X)[:, -1]
 
 games = games[['game_id', 'player_id', 'Player']]
+games['Pred. prob (%)'] = y_pred
 games['Pred. prob (%)'] = games['Pred. prob (%)'] / games.groupby('game_id')['Pred. prob (%)'].transform('sum')
 games['Pred. odds'] = games['Pred. prob (%)'].apply(lambda x: round(1/x, 1))
 games['Pred. prob (%)'] = games['Pred. prob (%)'].apply(lambda x: round(x * 100, 1))
@@ -101,4 +102,4 @@ games = games.sort_values(['game_id', 'Pred. odds']).reset_index(drop = True)
 
 send_email(games,
            receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
-           subject = 'MACHINE LEARNING PREDICTIONS')
+           subject = '[LeFirstBasket] MACHINE LEARNING PREDICTIONS!')

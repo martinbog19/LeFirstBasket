@@ -1,5 +1,5 @@
 import string
-from unidecode import unidecode
+# from unidecode import unidecode
 
 
 def getId(tag) :
