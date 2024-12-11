@@ -10,7 +10,7 @@ import pickle
 from helpers.scrape import get_first_basket, get_roster
 from helpers.preprocess import feature_engineering
 from helpers.utils import getId
-# from helpers.email import send_email
+from helpers.email import send_email
 
 
 yst = datetime.now(ZoneInfo('America/New_York')) - timedelta(days = 1)
