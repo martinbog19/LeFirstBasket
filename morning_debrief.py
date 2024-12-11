@@ -5,8 +5,10 @@ import requests
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from time import sleep
+import pickle
 
 from helpers.scrape import get_first_basket, get_roster
+from helpers.preprocess import feature_engineering
 from helpers.utils import getId
 from helpers.email import send_email
 
@@ -73,3 +75,30 @@ synopsis = f'[LeFirstBasket | {date}] Random model: {round(100 * acc_rand, 1)}% 
 send_email(first_basket_df,
            receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
            subject = synopsis)
+
+
+
+
+
+# Send ML preds
+data, features = feature_engineering()
+
+games = data.copy()[data['game_id'].isin(game_ids)].reset_index(drop = True)
+
+X = games[features].to_numpy()
+
+# Load the model from the .pkl file
+with open('models/model_rf.pkl', "rb") as f:
+    model = pickle.load(f)
+
+y_pred = model.predict_proba(X)[:, -1]
+
+games = games[['game_id', 'player_id', 'Player']]
+games['Pred. prob (%)'] = games['Pred. prob (%)'] / games.groupby('game_id')['Pred. prob (%)'].transform('sum')
+games['Pred. odds'] = games['Pred. prob (%)'].apply(lambda x: round(1/x, 1))
+games['Pred. prob (%)'] = games['Pred. prob (%)'].apply(lambda x: round(x * 100, 1))
+games = games.sort_values(['game_id', 'Pred. odds']).reset_index(drop = True)
+
+send_email(games,
+           receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
+           subject = 'MACHINE LEARNING PREDICTIONS')

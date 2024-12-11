@@ -1,4 +1,4 @@
-Year,player_id,Rating,leakage
+Year,player_id,rating,leakage
 2001,abdulma02,69.4,True
 2001,abdulta01,73.8,False
 2001,abdursh01,85.1,False
