@@ -26,7 +26,7 @@ games = pd.read_csv('data/games.csv')
 now = datetime.today()
 today_dt = now.replace(hour = 0, minute = 0, second = 0, microsecond = 0)
 print(now.strftime('%H:%M:%S'))
-games_now = games[(games['Time'] >= now.strftime(f'%Y-%m-%d')  + f'{start_time}:%00:%00') & (games['Time'] < now.strftime(f'%Y-%m-%d')  + f'{start_time+3}:%00:%00')]
+games_now = games[(games['Time'] >= now.strftime(f'%Y-%m-%d')  + f'{start_time}:00:00') & (games['Time'] < now.strftime(f'%Y-%m-%d')  + f'{start_time+3}:00:00')]
 
 # Iterate through games
 for _, game in games_now.iterrows() :
