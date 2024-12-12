@@ -80,59 +80,49 @@ execute_crons = [datetime_to_cron_utc(t) for t in left_dt_et - timedelta(hours =
 yml_path = ".github/workflows/schedule_today_games.yml"  # Output workflow file
 
 # Create the dynamic .yml file content
-workflow_content = f"""name: Run Script Before NBA Games
-
-on:
-  schedule:
-"""
-
-for cron, left_hr in zip(execute_crons, left_hr_et) :
-    workflow_content += f"""
-    - cron: '{cron}'
-    """
-
-workflow_content += """
-jobs:
-  run_script:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Set Up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install Dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run Before Game Script
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          START_TIME: ${{ matrix.start_time }}
-        run: python run_before_game.py --start-time $START_TIME
-
-      - name: Commit and Push YAML
-        run: |
-          git pull
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add 'data/odds_first_basket.csv'
-          git commit -m "Write new odds"
-          git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
-
-    strategy:
-      matrix:
-        include:
-"""
-
 for cron, left_hr in zip(execute_crons, left_hr_et) :
     
-    workflow_content += f"""
-          - cron: '{cron}'
-            start_time: '{left_hr}'
-    """
+    workflow_content = f"""
+
+    name: Run Before NBA Games [{left_hr}:00]
+
+    on:
+      schedule:
+      - cron: '{cron}'
+      workflow_dispatch:
+
+
+    jobs:
+      run_script:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout Repository
+            uses: actions/checkout@v3
+
+          - name: Set Up Python
+            uses: actions/setup-python@v4
+            with:
+              python-version: '3.x'
+
+          - name: Install Dependencies
+            run: pip install -r requirements.txt
+
+          - name: Run Before Game Script
+            env:
+              ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+              START_TIME: {left_hr}
+            run: python run_before_game.py --start-time $START_TIME
+
+          - name: Commit and Push csv
+            run: |
+              git pull
+              git config --global user.name "github-actions"
+              git config --global user.email "github-actions@github.com"
+              git add 'data/odds_first_basket.csv'
+              git commit -m "Write new odds"
+              git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
+        """
+    
 
 # Save the workflow content to a .yml file
 with open(yml_path, "w") as f:
