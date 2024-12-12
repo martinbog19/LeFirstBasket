@@ -101,11 +101,23 @@ jobs:
         ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
       run: python schedule_today_games.py
 
-    - name: Commit and Push YAML
+  git_push:
+
+    runs-on: ubuntu-latest
+
+    needs: schedule_today_games
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.YML_TOKEN }}
+
+    - name: Push All Changes
       run: |
         git pull
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
         git add .
-        git commit -m "Update and write today's schedule"
+        git commit -m "Updating metadata, game stats, scheduling today's games"
         git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
