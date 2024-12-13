@@ -14,8 +14,10 @@ else :
   with open('secrets/odds_api_key.txt') as f:
     api_key = f.read()
 
-print(os.getenv("START_TIME"))
-start_time = int(os.getenv("START_TIME"))
+if os.getenv("GITHUB_ACTIONS") == "true" :
+  start_time = int(os.getenv("START_TIME"))
+else :
+  start_time = 19
 
 with open('utils/odds_tm_map.json', 'r') as f :
   odds_tm_map = json.load(f)

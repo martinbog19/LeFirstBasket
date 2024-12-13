@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Before Game Script
         env:
-          ODDS_API_KEY: ${ secrets.ODDS_API_KEY }
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           START_TIME: 19
         run: python run_before_game.py --start-time $START_TIME
 
@@ -33,4 +33,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add 'data/odds_first_basket.csv'
           git commit -m "Write new odds"
-          git push https://x-access-token:${ secrets.YML_TOKEN }@github.com/${ github.repository } HEAD:${ github.ref }
+          git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
