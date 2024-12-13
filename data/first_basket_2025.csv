@@ -362,3 +362,6 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412100OKC,2024-12-10,,OKC,DAL,2025,irvinky01,DAL,48.0,4,3.0,2,1,harteis01,livelde01,doncilu01,DAL
 202412110HOU,2024-12-11,,HOU,GSW,2025,sengual01,HOU,32.0,3,2.0,2,0,sengual01,greendr01,smithja05,HOU
 202412110NYK,2024-12-11,,NYK,ATL,2025,bridgmi01,NYK,26.0,2,3.0,0,1,townska01,capelca01,johnsja05,ATL
+202412120BOS,2024-12-12,,BOS,DET,2025,porzikr01,BOS,99.0,7,3.0,3,3,porzikr01,stewais01,horfoal01,BOS
+202412120MIA,2024-12-12,,MIA,TOR,2025,highsha01,MIA,21.0,1,3.0,0,0,adebaba01,fernabr01,robindu01,MIA
+202412120NOP,2024-12-12,,NOP,SAC,2025,murphtr02,NOP,53.0,4,3.0,2,1,missiyv01,sabondo01,murrade01,NOP
