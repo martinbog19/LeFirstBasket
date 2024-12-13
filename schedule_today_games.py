@@ -63,7 +63,7 @@ games = games.merge(
 )
 
 games['insert_timestamp_utc'] = datetime.now(timezone.utc)
-games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
+# games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
 
 
 today_dt = today.replace(hour = 0, minute = 0, second = 0, microsecond = 0, tzinfo = None)
@@ -73,7 +73,7 @@ games['left_dt'] = pd.cut(pd.to_datetime(games['Time']), time_bins, labels = tim
 
 left_dt_et = pd.to_datetime(games['left_dt'].sort_values().unique())
 left_hr_et = [t.hour for t in left_dt_et]
-execute_crons = [datetime_to_cron_utc(t) for t in left_dt_et - timedelta(hours = 1)]
+execute_crons = [datetime_to_cron_utc(t) for t in left_dt_et - timedelta(minutes = 55)]
 
 workflow_path = '.github/workflows'
 
@@ -87,11 +87,11 @@ for filename in os.listdir(workflow_path) :
 # Create today's .yml
 for cron, left_hr in zip(execute_crons, left_hr_et) :
     
-  workflow_content = f"""name: Run Before NBA Games [{left_hr}:00]
+  workflow_content = """name: Run Before NBA Games [%d:00]
 
 on:
   schedule:
-  - cron: '{cron}'
+  - cron: '%s'
   workflow_dispatch:
 
 jobs:
@@ -112,7 +112,7 @@ jobs:
       - name: Run Before Game Script
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          START_TIME: {left_hr}
+          START_TIME: %d
         run: python run_before_game.py --start-time $START_TIME
 
       - name: Commit and Push csv
@@ -123,7 +123,7 @@ jobs:
           git add 'data/odds_first_basket.csv'
           git commit -m "Write new odds"
           git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
-"""
+""" % (left_hr, cron, left_hr)
     
   # Save the workflow content to a .yml file
   with open(os.path.join(workflow_path, f'run_before_game_{left_hr}00.yml'), "w") as f:
