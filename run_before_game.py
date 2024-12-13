@@ -69,8 +69,8 @@ for _, game in games_now.iterrows() :
     game_df['insert_timestamp_utc'] = datetime.now(timezone.utc)
     game_df.to_csv('data/odds_first_basket.csv', index = None, header = None, mode = 'a')
 
-    subject = f'[LeFirstBasket | {now.strftime("%d %b %Y")}] Successfully scraped {game["game_id"]}!'
+    # subject = f'[LeFirstBasket | {now.strftime("%d %b %Y")}] Successfully scraped {game["game_id"]}!'
     
-    send_email(game_df[['name', 'price', 'bookmaker', 'update_time']],
-               receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
-               subject = subject)
+    # send_email(game_df[['name', 'price', 'bookmaker', 'update_time']],
+    #            receivers = ['martinbog19@gmail.com', 'lucas.leforestier@gmail.com'],
+    #            subject = subject)
