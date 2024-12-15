@@ -63,7 +63,7 @@ games = games.merge(
 )
 
 games['insert_timestamp_utc'] = datetime.now(timezone.utc)
-# games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
+games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
 
 
 today_dt = today.replace(hour = 0, minute = 0, second = 0, microsecond = 0, tzinfo = None)

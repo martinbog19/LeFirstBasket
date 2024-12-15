@@ -5,7 +5,7 @@ import requests
 import os
 import json
 
-from helpers.email import send_email
+# from helpers.email import send_email
 
 
 if os.getenv("GITHUB_ACTIONS") == "true" :
