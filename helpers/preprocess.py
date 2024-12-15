@@ -5,7 +5,7 @@ import os
 
 data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data')
 
-def feature_engineering() :
+def feature_engineering(lineups = None) :
 
     feature_stats = ['PTS', 'USG%', 'VORP', 'FGA']
     windows = [5, 25, 50]
@@ -25,6 +25,9 @@ def feature_engineering() :
         df.insert(1, 'Year', year)
         dfs.append(df)
     stats = pd.concat(dfs).sort_values('game_id').reset_index(drop = True)
+
+    # Add future game lineups
+    stats = pd.concat([stats, lineups]).reset_index(drop = True)
 
     # Load rating data
     ratings = pd.read_csv(os.path.join(data_path, '2k-ratings-2001-2024.csv'))[['Year', 'player_id', 'rating']]
