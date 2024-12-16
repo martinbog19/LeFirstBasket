@@ -6,7 +6,7 @@ Can we predict who will score the first basket during NBA games -- and make mone
 
 ## To-Do List
 
-- [ ] Refactor to make ML preidctions before the game
+- [x] Refactor to make ML preidctions before the game
 - [ ] Add ML predictions to Morning Debrief
 - [ ] Add position feature
 - [ ] Scrape first baskets 2010-2018

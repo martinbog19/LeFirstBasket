@@ -4,13 +4,14 @@ from bs4 import BeautifulSoup
 import numpy as np
 import os
 import re
-
+import json
 
 from time import sleep
 from .utils import getId, normalize_name
 
 import warnings
 warnings.simplefilter(action = 'ignore', category = FutureWarning)
+
 
 
 def get_ratings(year) :
@@ -181,3 +182,56 @@ def get_first_basket(gameId) :
                     'jumpball_possession_tm'
                     ]
                 ), (starting_lineup_home, starting_lineup_away)
+
+
+def get_rotowire_lineups() :
+
+    url = 'https://www.rotowire.com/basketball/nba-lineups.php'
+    response = requests.get(url)
+    html = response.text.replace('<!--', '').replace('-->', '')
+    soup = BeautifulSoup(html, 'lxml')
+    
+    return soup
+
+def get_lineups(soup, tm) :
+
+    with open('utils/rotowire_tm_map.json', 'r') as f:
+        tm_map = json.load(f)
+
+    home_tags = soup.find_all('a', class_ = 'lineup__team is-home')
+    away_tags = soup.find_all('a', class_ = 'lineup__team is-visit')
+
+    home_lineup_tags = soup.find_all('ul', class_ = 'lineup__list is-home')
+    away_lineup_tags = soup.find_all('ul', class_ = 'lineup__list is-visit')
+
+    for home_tag, away_tag, home_lineup_tag, away_lineup_tag in zip(
+        home_tags, away_tags, home_lineup_tags, away_lineup_tags
+    ) :
+        
+        rw_home = home_tag.find(class_ = 'lineup__abbr').text
+        rw_away = away_tag.find(class_ = 'lineup__abbr').text
+
+        home, away = tm_map[rw_home], tm_map[rw_away]
+
+        if home == tm or away == tm :
+
+            starting_lineup_tags = home_lineup_tag.find_all('li')[1:6]
+            players_home = [' '.join(x.find('a', href = True)['href'].split('/')[-1].split('-')[:-1]) for x in starting_lineup_tags]
+            df_home = pd.DataFrame(players_home, columns = ['name'])
+            df_home['name_norm'] = df_home['name'].apply(lambda x: normalize_name(x, True))
+            df_home['Team'] = home
+
+            starting_lineup_tags = away_lineup_tag.find_all('li')[1:6]
+            players_away = [' '.join(x.find('a', href = True)['href'].split('/')[-1].split('-')[:-1]) for x in starting_lineup_tags]
+            df_away = pd.DataFrame(players_away, columns = ['name'])
+            df_away['name_norm'] = df_away['name'].apply(lambda x: normalize_name(x, True))
+            df_away['Team'] = away
+            break
+
+        else :
+            pass
+
+
+    lineups = pd.concat([df_home, df_away]).reset_index(drop = True)
+
+    return lineups
