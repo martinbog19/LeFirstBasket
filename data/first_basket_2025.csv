@@ -375,3 +375,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412130UTA,2024-12-13,,UTA,PHO,2025,onealro01,PHO,37.0,2,3.0,1,0,kesslwa01,nurkiju01,jonesty01,PHO
 202412140MIL,2024-12-14,,MIL,ATL,2025,antetgi01,MIL,25.0,3,2.0,0,2,lopezbr01,capelca01,daniedy01,ATL
 202412140OKC,2024-12-14,,OKC,HOU,2025,sengual01,HOU,83.0,6,2.0,2,3,harteis01,sengual01,smithja05,HOU
+202412150GSW,2024-12-15,,GSW,DAL,2025,washipj01,DAL,16.0,1,2.0,0,0,looneke01,livelde01,doncilu01,DAL
+202412150IND,2024-12-15,,IND,NOP,2025,murphtr02,NOP,18.0,1,2.0,0,0,turnemy01,missiyv01,murrade01,NOP
+202412150LAL,2024-12-15,,LAL,MEM,2025,davisan02,LAL,23.0,1,2.0,0,0,davisan02,jacksja02,chrisma02,LAL
+202412150ORL,2024-12-15,,ORL,NYK,2025,anunoog01,NYK,45.0,3,2.0,1,1,bitadgo01,townska01,hartjo01,NYK
+202412150PHO,2024-12-15,,PHO,POR,2025,bookede01,PHO,17.0,1,3.0,0,0,nurkiju01,clingdo01,jonesty01,PHO
+202412150SAS,2024-12-15,,SAS,MIN,2025,edwaran01,MIN,44.0,3,3.0,1,1,wembavi01,goberru01,sochaje01,SAS
+202412150WAS,2024-12-15,,WAS,BOS,2025,coulibi01,WAS,27.0,1,3.0,0,0,sarral01,porzikr01,poolejo01,WAS
