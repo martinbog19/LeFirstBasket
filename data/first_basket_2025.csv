@@ -382,3 +382,9 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412150PHO,2024-12-15,,PHO,POR,2025,bookede01,PHO,17.0,1,3.0,0,0,nurkiju01,clingdo01,jonesty01,PHO
 202412150SAS,2024-12-15,,SAS,MIN,2025,edwaran01,MIN,44.0,3,3.0,1,1,wembavi01,goberru01,sochaje01,SAS
 202412150WAS,2024-12-15,,WAS,BOS,2025,coulibi01,WAS,27.0,1,3.0,0,0,sarral01,porzikr01,poolejo01,WAS
+202412160BRK,2024-12-16,,BRK,CLE,2025,simmobe01,BRK,14.0,1,2.0,0,0,claxtni01,allenja01,garlada01,CLE
+202412160CHO,2024-12-16,,CHO,PHI,2025,oubreke01,PHI,4.0,1,2.0,0,0,willima07,drumman01,oubreke01,PHI
+202412160DET,2024-12-16,,DET,MIA,2025,adebaba01,MIA,47.0,2,3.0,1,0,durenja01,adebaba01,butleji01,MIA
+202412160LAC,2024-12-16,,LAC,UTA,2025,zubaciv01,LAC,34.0,2,2.0,0,1,zubaciv01,kesslwa01,sextoco01,UTA
+202412160SAC,2024-12-16,,SAC,DEN,2025,westbru01,DEN,15.0,2,2.0,0,1,sabondo01,jokicni01,westbru01,DEN
+202412160TOR,2024-12-16,,TOR,CHI,2025,poeltja01,TOR,14.0,1,2.0,0,0,poeltja01,vucevni01,mogbojo01,TOR
