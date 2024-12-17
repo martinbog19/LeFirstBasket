@@ -31,6 +31,7 @@ games['Home'] = [x['href'].split('/')[2] for x in table.find_all('a', href = Tru
 games['Away'] = [x['href'].split('/')[2] for x in table.find_all('a', href = True) if 'teams' in x['href']][0::2]
 games['Date'] = pd.to_datetime(games['Date'])
 games = games[pd.to_datetime(games['Date']) == pd.to_datetime(today.date())].reset_index(drop = True)
+assert games.shape[0] > 0, "No games today!"
 games['Time'] = (games['Date'].astype(str) + ' ' +  games['Time']).apply(lambda x: datetime.strptime(x.upper() + 'M', "%Y-%m-%d %I:%M%p"))
 games['game_id'] = games['Date'].apply(lambda x: datetime.strftime(x, "%Y%m%d")) + '0' + games['Home']
 games = games[['game_id', 'Date', 'Time', 'Home', 'Away']]
