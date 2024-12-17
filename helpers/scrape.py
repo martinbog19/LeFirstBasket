@@ -231,7 +231,6 @@ def get_lineups(soup, tm) :
         else :
             pass
 
-
     lineups = pd.concat([df_home, df_away]).reset_index(drop = True)
 
     return lineups
