@@ -106,7 +106,6 @@ jobs:
         git pull
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git add data/games.csv
-        git add .github/workflows/
+        git add .
         git commit -m "Updating metadata, game stats, scheduling today's games"
         git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}

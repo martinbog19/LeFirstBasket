@@ -30,41 +30,41 @@ games = pd.read_html(str(table))[0].rename(columns = {'Start (ET)': 'Time'})
 games['Home'] = [x['href'].split('/')[2] for x in table.find_all('a', href = True) if 'teams' in x['href']][1::2]
 games['Away'] = [x['href'].split('/')[2] for x in table.find_all('a', href = True) if 'teams' in x['href']][0::2]
 games['Date'] = pd.to_datetime(games['Date'])
-games = games[pd.to_datetime(games['Date']) == pd.to_datetime(today.date())].reset_index(drop = True)
-assert games.shape[0] > 0, "No games today!"
-games['Time'] = (games['Date'].astype(str) + ' ' +  games['Time']).apply(lambda x: datetime.strptime(x.upper() + 'M', "%Y-%m-%d %I:%M%p"))
-games['game_id'] = games['Date'].apply(lambda x: datetime.strftime(x, "%Y%m%d")) + '0' + games['Home']
-games = games[['game_id', 'Date', 'Time', 'Home', 'Away']]
+games = games[games['Date'] == pd.to_datetime(today.date())].reset_index(drop = True)
+if games.shape[0] > 0 :
+  games['Time'] = (games['Date'].astype(str) + ' ' +  games['Time']).apply(lambda x: datetime.strptime(x.upper() + 'M', "%Y-%m-%d %I:%M%p"))
+  games['game_id'] = games['Date'].apply(lambda x: datetime.strftime(x, "%Y%m%d")) + '0' + games['Home']
+  games = games[['game_id', 'Date', 'Time', 'Home', 'Away']]
 
 
-if os.getenv("GITHUB_ACTIONS") == "true" :
-  api_key = os.getenv('ODDS_API_KEY')
-else :
-  with open('secrets/odds_api_key.txt') as f:
-    api_key = f.read()
+  if os.getenv("GITHUB_ACTIONS") == "true" :
+    api_key = os.getenv('ODDS_API_KEY')
+  else :
+    with open('secrets/odds_api_key.txt') as f:
+      api_key = f.read()
 
-with open('utils/odds_tm_map.json', 'r') as f :
-  odds_tm_map = json.load(f)
+  with open('utils/odds_tm_map.json', 'r') as f :
+    odds_tm_map = json.load(f)
 
-events_response = requests.get(f'https://api.the-odds-api.com/v4/sports/basketball_nba/events',
-                               params = {'apiKey': api_key,
-                                         'commenceTimeTo': tmrw_utc.strftime('%Y-%m-%dT%H:%M:%SZ')})
+  events_response = requests.get(f'https://api.the-odds-api.com/v4/sports/basketball_nba/events',
+                                params = {'apiKey': api_key,
+                                          'commenceTimeTo': tmrw_utc.strftime('%Y-%m-%dT%H:%M:%SZ')})
 
 
-assert events_response.status_code == 200, f'Odds API query not successful {events_response.status_code}'
+  assert events_response.status_code == 200, f'Odds API query not successful {events_response.status_code}'
 
-# Map odds API event_id to game_id
-odds = pd.DataFrame(events_response.json()).rename(columns = {'id': 'event_id'})
-odds['game_id'] = today.strftime('%Y%m%d') + '0' + odds['home_team'].map(odds_tm_map)
+  # Map odds API event_id to game_id
+  odds = pd.DataFrame(events_response.json()).rename(columns = {'id': 'event_id'})
+  odds['game_id'] = today.strftime('%Y%m%d') + '0' + odds['home_team'].map(odds_tm_map)
 
-games = games.merge(
-    odds[['game_id', 'event_id']],
-    on = 'game_id',
-    how = 'left'
-)
+  games = games.merge(
+      odds[['game_id', 'event_id']],
+      on = 'game_id',
+      how = 'left'
+  )
 
-games['insert_timestamp_utc'] = datetime.now(timezone.utc)
-games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
+  games['insert_timestamp_utc'] = datetime.now(timezone.utc)
+  games.to_csv('data/games.csv', index = None, header = None, mode = 'a')
 
 
 today_dt = today.replace(hour = 0, minute = 0, second = 0, microsecond = 0, tzinfo = None)
