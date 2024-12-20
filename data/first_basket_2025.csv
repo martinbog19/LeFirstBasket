@@ -388,3 +388,16 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412160LAC,2024-12-16,,LAC,UTA,2025,zubaciv01,LAC,34.0,2,2.0,0,1,zubaciv01,kesslwa01,sextoco01,UTA
 202412160SAC,2024-12-16,,SAC,DEN,2025,westbru01,DEN,15.0,2,2.0,0,1,sabondo01,jokicni01,westbru01,DEN
 202412160TOR,2024-12-16,,TOR,CHI,2025,poeltja01,TOR,14.0,1,2.0,0,0,poeltja01,vucevni01,mogbojo01,TOR
+202412190BOS,2024-12-19,,BOS,CHI,2025,willipa01,CHI,28.0,2,3.0,1,0,porzikr01,vucevni01,whitede01,BOS
+202412190DAL,2024-12-19,,DAL,LAC,2025,dunnkr01,LAC,50.0,4,3.0,2,1,livelde01,zubaciv01,jonesde02,LAC
+202412190DET,2024-12-19,,DET,UTA,2025,hardati02,DET,18.0,1,3.0,0,0,durenja01,kesslwa01,thompau01,DET
+202412190HOU,2024-12-19,,HOU,NOP,2025,missiyv01,NOP,38.0,1,2.0,0,0,sengual01,missiyv01,greenja05,HOU
+202412190MEM,2024-12-19,,MEM,GSW,2025,banede01,MEM,9.0,1,3.0,0,0,edeyza01,looneke01,wiggian01,GSW
+202412190MIN,2024-12-19,,MIN,NYK,2025,randlju01,MIN,16.0,1,2.0,0,0,goberru01,townska01,conlemi01,MIN
+202412190ORL,2024-12-19,,ORL,OKC,2025,suggsja01,ORL,22.0,3,2.0,2,0,bitadgo01,harteis01,dasiltr01,ORL
+202412190PHO,2024-12-19,,PHO,IND,2025,bookede01,PHO,17.0,1,2.0,0,0,nurkiju01,turnemy01,bealbr01,PHO
+202412190POR,2024-12-19,,POR,DEN,2025,braunch01,DEN,91.0,6,2.0,2,3,aytonde01,jokicni01,murraja01,DEN
+202412190SAC,2024-12-19,,SAC,LAL,2025,reaveau01,LAL,16.0,1,3.0,0,0,sabondo01,davisan02,hachiru01,LAL
+202412190SAS,2024-12-19,,SAS,ATL,2025,daniedy01,ATL,28.0,1,2.0,0,0,wembavi01,capelca01,sochaje01,SAS
+202412190TOR,2024-12-19,,TOR,BRK,2025,dickgr01,TOR,24.0,2,3.0,1,0,mogbojo01,claxtni01,johnske07,BRK
+202412190WAS,2024-12-19,,WAS,CHO,2025,bridgmi02,CHO,12.0,1,2.0,0,0,sarral01,willima07,ballla01,CHO
