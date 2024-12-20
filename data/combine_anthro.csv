@@ -1,4 +1,5 @@
-name,Year,height,standing_reach,wingspanAloysius Anagonye,2003,200.03,269.24,219.71
+name,Year,height,standing_reach,wingspan
+Aloysius Anagonye,2003,200.03,269.24,219.71
 Rick Anderson,2003,203.84,270.51,210.82
 Carmelo Anthony,2003,198.75,267.97,213.36
 Jerome Beasley,2003,205.74,271.78,214.63
@@ -128,7 +129,6 @@ Misan Nikagbatse,2004,191.77,259.08,208.28
 Emeka Okafor,2004,205.1,280.67,223.52
 Randall Orr,2004,205.74,273.05,209.55
 Dylan Page,2004,201.93,266.7,200.66
-Drago Pasalic,2004,206.38,274.32,212.09
 Rickey Paulding,2004,189.87,257.81,207.01
 Kelvin Pena,2004,188.59,252.73,199.39
 Tim Pickett,2004,190.5,255.27,201.93
@@ -195,7 +195,6 @@ Jarrett Jack,2005,189.23,254.0,201.93
 Dwayne Jones,2005,204.47,275.59,220.34
 Mindaugas Katelynas,2005,201.93,267.97,210.82
 Jason Klotz,2005,204.47,273.05,208.28
-Carl Krauser,2005,181.61,250.19,196.85
 Keith Langford,2005,188.59,256.54,205.74
 David Lee,2005,202.56,270.51,213.36
 David Lucas,2005,199.39,262.89,213.36
@@ -291,7 +290,6 @@ Allan Ray,2006,185.42,252.73,204.47
 JJ Redick,2006,193.04,247.65,191.13
 Antywane Robinson,2006,198.75,267.97,219.71
 Brandon Roy,2006,196.22,256.54,203.2
-Blake Schilb,2006,196.22,259.08,205.1
 Mouhamed Sene,2006,210.82,287.02,234.95
 Cedric Simmons,2006,203.84,275.59,224.16
 Marcus Slaughter,2006,200.66,265.43,212.09
@@ -501,12 +499,10 @@ Jodie Meeks,2009,190.5,248.92,194.31
 Patty Mills,2009,180.97,241.3,187.96
 Byron Mullens,2009,212.72,281.94,217.17
 A.J. Price,2009,184.15,246.38,192.41
-Tyler Smith,2009,196.22,265.43,207.65
 DaJuan Summers,2009,201.3,270.51,215.27
 Jermaine Taylor,2009,191.77,256.54,205.1
 Jeff Teague,2009,183.52,250.19,201.93
 Hasheem Thabeet,2009,216.53,287.02,229.24
-Marcus Thornton,2009,189.87,251.46,195.58
 Terrence Williams,2009,195.58,262.89,205.74
 Sam Young,2009,196.22,267.97,210.19
 Solomon Alabi,2010,212.09,287.02,226.06
@@ -654,7 +650,6 @@ Fab Melo,2012,210.19,279.4,219.71
 Khris Middleton,2012,200.03,261.62,210.19
 Darius Miller,2012,198.12,256.54,205.74
 Quincy Miller,2012,205.1,266.7,216.53
-Tony Mitchell,2012,196.22,254.0,208.28
 Arnett Moultrie,2012,207.01,270.51,219.08
 Kevin Murphy,2012,195.58,251.46,200.03
 Andrew Nicholson,2012,204.47,271.78,223.52
@@ -859,7 +854,6 @@ Cat Barber,2016,186.69,242.57,196.85
 Malik Beasley,2016,191.77,255.27,200.66
 DeAndre Bembry,2016,193.68,256.54,206.38
 Ben Bentil,2016,201.3,266.7,217.17
-Jaron Blossomgame,2016,198.75,259.08,208.28
 Joel Bolomboy,2016,201.93,262.89,217.81
 Malcolm Brogdon,2016,192.41,248.92,209.55
 Jaylen Brown,2016,196.22,260.35,212.72
@@ -875,10 +869,7 @@ Kay Felder,2016,173.35,224.79,189.23
 Dorian Finney-Smith,2016,199.39,267.97,212.72
 Michael Gbinije,2016,196.85,256.54,201.93
 Daniel Hamilton,2016,198.75,262.89,205.74
-Josh Hart,2016,193.04,252.73,204.47
-Nigel Hayes,2016,198.75,273.05,220.98
 Buddy Hield,2016,192.41,256.54,206.38
-Justin Jackson,2016,200.66,262.89,210.19
 Demetrius Jackson,2016,182.88,236.22,196.85
 Brice Johnson,2016,205.74,270.51,214.63
 Damian Jones,2016,208.91,271.78,222.88
@@ -888,7 +879,6 @@ Caris LeVert,2016,197.49,256.54,208.28
 Marcus Lee,2016,205.74,273.05,220.98
 Thon Maker,2016,212.72,280.67,220.98
 Patrick McCaw,2016,196.22,255.27,208.28
-Malik Newman,2016,188.59,247.65,197.49
 Georges Niang,2016,200.03,261.62,208.28
 Chinanu Onuaku,2016,205.74,275.59,220.34
 Marcus Paige,2016,184.15,246.38,198.75
@@ -900,8 +890,6 @@ Malachi Richardson,2016,194.94,257.81,213.36
 Wayne Selden,2016,193.68,256.54,209.55
 Pascal Siakam,2016,203.84,273.05,221.62
 Diamond Stone,2016,205.74,275.59,220.34
-Caleb Swanigan,2016,201.93,271.78,222.25
-Melo Trimble,2016,186.06,234.95,187.96
 Tyler Ulis,2016,174.62,224.79,187.96
 Jarrod Uthoff,2016,204.47,264.16,212.09
 Denzel Valentine,2016,193.04,259.08,210.19
@@ -910,7 +898,6 @@ Troy Williams,2016,197.49,259.08,203.84
 Kyle Wiltjer,2016,205.1,260.35,214.0
 Stephen Zimmerman,2016,208.91,275.59,221.62
 Edrice Adebayo,2017,205.1,274.32,220.34
-Rawle Alkins,2017,189.23,251.46,205.1
 Jarrett Allen,2017,205.74,278.13,226.69
 Kadeem Allen,2017,185.42,252.73,206.38
 Ike Anigbogu,2017,204.47,280.67,229.24
@@ -927,7 +914,6 @@ Dillon Brooks,2017,195.58,255.27,198.12
 Thomas Bryant,2017,207.01,285.75,228.6
 Zach Collins,2017,208.91,281.94,215.9
 John Collins,2017,203.84,270.51,211.46
-Hamidou Diallo,2017,192.41,257.81,211.46
 Tyler Dorsey,2017,190.5,252.73,196.22
 Damyean Dotson,2017,194.31,254.0,205.74
 PJ Dozier,2017,196.22,256.54,210.82
@@ -965,7 +951,6 @@ Edmond Sumner,2017,193.04,260.35,205.74
 Caleb Swanigan,2017,201.93,274.32,220.98
 Sindarius Thornwell,2017,191.77,261.62,208.28
 Melo Trimble,2017,186.06,242.57,187.96
-Moritz Wagner,2017,208.28,274.32,213.36
 Derrick Walton Jr.,2017,180.34,241.3,189.23
 Thomas Welsh,2017,212.09,278.13,213.36
 Derrick White,2017,191.13,257.81,201.93
@@ -975,7 +960,6 @@ Omer Yurtseven,2017,209.55,275.59,215.9
 Rawle Alkins,2018,189.87,251.46,205.1
 Grayson Allen,2018,190.5,246.38,201.3
 Kostas Antetokounmpo,2018,205.74,279.4,219.08
-Udoka Azubuike,2018,208.28,285.75,231.14
 Mohamed Bamba,2018,211.46,293.37,238.76
 Jaylen Barford,2018,186.06,245.11,191.77
 Keita Bates-Diop,2018,201.3,270.51,221.62
@@ -991,16 +975,13 @@ Wendell Carter,2018,205.1,276.86,224.79
 Donte DiVincenzo,2018,191.77,247.65,198.12
 Hamidou Diallo,2018,193.68,261.62,212.09
 Trevon Duval,2018,186.69,247.65,203.84
-Carsen Edwards,2018,179.71,240.03,198.75
 Keenan Evans,2018,186.69,248.92,196.22
 Jacob Evans,2018,193.68,260.35,206.38
-Bruno Fernando,2018,205.1,276.86,224.16
 Melvin Frazier,2018,194.31,266.7,217.81
 Shai Gilgeous-Alexander,2018,194.31,264.16,212.09
 Devonte Graham,2018,183.52,243.84,198.75
 Isaac Haas,2018,216.53,283.21,226.06
 Devon Hall,2018,193.68,259.08,202.56
-Jaylen Hands,2018,186.69,248.92,196.85
 Kevin Hervey,2018,199.39,271.78,222.25
 Aaron Holiday,2018,182.25,246.38,201.93
 Kevin Huerter,2018,198.75,257.81,201.93
@@ -1011,7 +992,6 @@ George King,2018,194.94,257.81,212.09
 Kevin Knox,2018,202.56,274.32,212.72
 Sagaba Konate,2018,199.39,270.51,213.36
 Caleb Martin,2018,194.94,257.81,208.28
-Cody Martin,2018,194.94,260.35,208.91
 Yante Maten,2018,201.3,273.05,214.63
 Brandon McCoy,2018,212.09,280.67,218.44
 DeAnthony Melton,2018,188.59,252.73,204.47
@@ -1021,7 +1001,6 @@ Sviatoslav Mykhailiuk,2018,199.39,254.0,194.94
 Malik Newman,2018,189.23,250.19,196.85
 Josh Okogie,2018,190.5,259.08,213.36
 Theo Pinson,2018,195.58,262.89,210.19
-Jontay Porter,2018,208.28,276.86,214.0
 Michael Porter,2018,207.01,275.59,214.0
 Billy Preston,2018,205.1,274.32,218.44
 Jerome Robinson,2018,193.04,248.92,201.3
@@ -1038,11 +1017,9 @@ Moritz Wagner,2018,209.55,274.32,213.36
 Lonnie Walker,2018,192.41,252.73,208.91
 PJ Washington,2018,199.39,271.78,219.71
 Austin Wiley,2018,203.84,281.94,226.06
-Kris Wilkes,2018,199.39,262.89,208.91
 Kenrich Williams,2018,198.12,262.89,201.3
 Trae Young,2018,184.15,242.57,190.5
 Nickeil Alexander-Walker,2019,193.68,259.08,207.01
-Charles Bassey,2019,205.1,278.13,222.25
 Darius Bazley,2019,202.56,271.78,213.36
 Bol Bol,2019,215.27,293.37,231.14
 Jordan Bone,2019,186.69,241.3,191.13
@@ -1057,12 +1034,10 @@ Tyler Cook,2019,201.3,270.51,214.63
 Jarrett Culver,2019,196.22,255.27,207.01
 Terence Davis,2019,190.5,256.54,205.1
 Luguentz Dort,2019,189.87,252.73,204.47
-Devon Dotson,2019,182.88,242.57,191.13
 Carsen Edwards,2019,179.71,240.03,198.12
 Tacko Fall,2019,226.69,311.15,249.56
 Bruno Fernando,2019,205.1,279.4,221.62
 Daniel Gafford,2019,206.38,279.4,219.08
-Quentin Grimes,2019,193.04,255.27,202.56
 Kyle Guy,2019,184.78,242.57,194.31
 Jaylen Hands,2019,186.69,246.38,196.85
 Jared Harper,2019,177.16,238.76,196.85
@@ -1087,16 +1062,13 @@ Charles Matthews,2019,195.58,261.62,207.01
 Jalen McDaniels,2019,203.84,267.97,214.0
 Zach Norvell Jr.,2019,194.31,256.54,198.12
 Jaylen Nowell,2019,191.13,248.92,201.3
-Jordan Nwora,2019,197.49,261.62,209.55
 KZ Okpala,2019,201.3,270.51,217.81
 Miye Oni,2019,193.68,255.27,210.19
 Eric Paschall,2019,198.12,262.89,212.72
-Reggie Perry,2019,203.2,269.24,214.63
 Shamorie Ponds,2019,181.61,245.11,191.77
 Jordan Poole,2019,191.77,252.73,200.03
 Jontay Porter,2019,207.65,278.13,213.36
 Kevin Porter Jr.,2019,193.04,261.62,205.74
-Neemias Queta,2019,210.19,283.21,224.16
 Cameron Reddish,2019,199.39,267.97,214.63
 Naz Reid,2019,205.1,276.86,221.62
 Isaiah Roby,2019,201.3,269.24,215.9
@@ -1111,116 +1083,111 @@ Coby White,2019,191.77,247.65,195.58
 Kris Wilkes,2019,198.75,261.62,210.19
 Grant Williams,2019,197.49,265.43,207.65
 Dylan Windler,2019,198.75,265.43,208.28
-Precious Achiuwa,2020,,,
-Ty-Shon Alexander,2020,,,
-Udoka Azubuike,2020,,,
-Tyler Bey,2020,,,
-Yoeli Childs,2020,,,
-Mamadi Diakite,2020,,,
-Devon Dotson,2020,,,
-Paul Eboua,2020,,,
-CJ Elleby,2020,,,
-Trent Forrest,2020,,,
-Josh Green,2020,,,
-Ashton Hagans,2020,,,
-Joshua Hall,2020,,,
-Jalen Harris,2020,,,
-Markus Howard,2020,,,
-Elijah Hughes,2020,,,
-Isaiah Joe,2020,,,
-Mason Jones,2020,,,
-Nathan Knight,2020,,,
-Theo Maledon,2020,,,
-Karim Mane,2020,,,
-Naji Marshall,2020,,,
-Kenyon Martin Jr.,2020,,,
-Skylar Mays,2020,,,
-Zeke Nnaji,2020,,,
-Jordan Nwora,2020,,,
-Reggie Perry,2020,,,
-Myles Powell,2020,,,
-Immanuel Quickley,2020,,,
-Jahmi'us Ramsey,2020,,,
-Paul Reed Jr.,2020,,,
-Nick Richards,2020,,,
-Grant Riller,2020,,,
-Jayden Scrubb,2020,,,
-Jalen Smith,2020,,,
-Cassius Stanley,2020,,,
-Lamar Stevens,2020,,,
-Isaiah Stewart,2020,,,
-Tyrell Terry,2020,,,
-Killian Tillie,2020,,,
-Xavier Tillman Sr.,2020,,,
-Kaleb Wesson,2020,,,
-Kahlil Whitney,2020,,,
-Cassius Winston,2020,,,
-Robert Woodard II,2020,,,
-Max Abmas,2021,,,
-Ochai Agbaji,2021,,,
-Marcus Bagley,2021,,,
-Scottie Barnes,2021,,,
-Charles Bassey,2021,,,
-Brandon Boston Jr.,2021,,,
-James Bouknight,2021,,,
-Greg Brown III,2021,,,
-Jared Butler,2021,,,
-Julian Champagnie,2021,,,
-Justin Champagnie,2021,,,
-Josh Christopher,2021,,,
-Ayo Dosunmu,2021,,,
-David Duke Jr.,2021,,,
-Kessler Edwards,2021,,,
-Luka Garza,2021,,,
-RaiQuan Gray,2021,,,
-Quentin Grimes,2021,,,
-Sam Hauser,2021,,,
-Aaron Henry,2021,,,
-Ariel Hukporti,2021,,,
-Matt Hurt,2021,,,
-Nah'Shon Hyland,2021,,,
-David Johnson,2021,,,
-Jalen Johnson,2021,,,
-Keon Johnson,2021,,,
-Carlik Jones,2021,,,
-Kai Jones,2021,,,
-Herbert Jones,2021,,,
-Johnny Juzang,2021,,,
-Corey Kispert,2021,,,
-AJ Lawson,2021,,,
-Scottie Lewis,2021,,,
-Isaiah Livers,2021,,,
-Makur Maker,2021,,,
-Sandro Mamukelashvili,2021,,,
-Tre Mann,2021,,,
-Miles McBride,2021,,,
-Davion Mitchell,2021,,,
-Isaiah Mobley,2021,,,
-Moses Moody,2021,,,
-Trey Murphy III,2021,,,
-Daishen Nix,2021,,,
-John Petty Jr.,2021,,,
-Yves Pons,2021,,,
-Jason Preston,2021,,,
-Joshua Primo,2021,,,
-Roko Prkacin,2021,,,
-Neemias Queta,2021,,,
-Austin Reaves,2021,,,
-Jeremiah Robinson-Earl,2021,,,
-Terrence Shannon Jr.,2021,,,
-Jericho Sims,2021,,,
-Jaden Springer,2021,,,
-DJ Steward,2021,,,
-JT Thor,2021,,,
-Isaiah Todd,2021,,,
-Duane Washington Jr.,2021,,,
-Trendon Watford,2021,,,
-Joe Wieskamp,2021,,,
-Aaron Wiggins,2021,,,
-Ziaire Williams,2021,,,
-Moses Wright,2021,,,
-McKinley Wright IV,2021,,,
-Marcus Zegarowski,2021,,,
+Precious Achiuwa,2020,201.93,275.59,215.27
+Ty-Shon Alexander,2020,187.96,254.0,203.2
+Udoka Azubuike,2020,208.28,276.86,231.78
+Tyler Bey,2020,198.12,267.97,216.53
+Yoeli Childs,2020,198.12,269.24,212.09
+Mamadi Diakite,2020,204.47,271.78,222.88
+Devon Dotson,2020,184.15,241.3,190.5
+Paul Eboua,2020,198.12,274.32,222.25
+CJ Elleby,2020,196.85,255.27,201.3
+Trent Forrest,2020,191.77,260.35,201.93
+Josh Green,2020,194.31,257.81,207.65
+Ashton Hagans,2020,186.69,252.73,203.2
+Joshua Hall,2020,198.12,265.43,210.82
+Jalen Harris,2020,189.87,247.65,200.66
+Markus Howard,2020,176.53,232.41,183.52
+Elijah Hughes,2020,194.94,257.81,201.93
+Isaiah Joe,2020,190.5,256.54,201.93
+Mason Jones,2020,192.41,260.35,200.66
+Nathan Knight,2020,203.2,278.13,218.44
+Theo Maledon,2020,193.04,255.27,205.1
+Karim Mane,2020,195.58,259.08,210.82
+Naji Marshall,2020,197.49,260.35,215.27
+Kenyon Martin Jr.,2020,198.12,259.08,201.3
+Skylar Mays,2020,190.5,251.46,198.12
+Zeke Nnaji,2020,206.38,267.97,218.44
+Jordan Nwora,2020,197.49,264.16,208.91
+Reggie Perry,2020,203.84,270.51,214.0
+Myles Powell,2020,184.15,251.46,200.66
+Immanuel Quickley,2020,187.96,251.46,203.84
+Jahmi'us Ramsey,2020,189.23,255.27,198.12
+Paul Reed Jr.,2020,204.47,278.13,218.44
+Nick Richards,2020,209.55,279.4,219.08
+Grant Riller,2020,183.52,245.11,196.22
+Jayden Scrubb,2020,195.58,265.43,207.01
+Jalen Smith,2020,206.38,279.4,219.08
+Cassius Stanley,2020,195.58,252.73,200.66
+Lamar Stevens,2020,197.49,256.54,205.74
+Isaiah Stewart,2020,201.3,275.59,225.43
+Tyrell Terry,2020,186.69,243.84,187.32
+Killian Tillie,2020,205.1,269.24,203.2
+Xavier Tillman Sr.,2020,201.93,269.24,218.44
+Kaleb Wesson,2020,206.38,283.21,222.25
+Kahlil Whitney,2020,196.85,267.97,214.0
+Cassius Winston,2020,184.15,246.38,198.12
+Robert Woodard II,2020,196.85,267.97,218.44
+Max Abmas,2021,179.07,238.76,187.32
+Marcus Bagley,2021,198.12,260.35,210.82
+Scottie Barnes,2021,200.66,274.32,220.34
+Charles Bassey,2021,206.38,273.05,220.98
+Brandon Boston Jr.,2021,197.49,264.16,210.19
+James Bouknight,2021,191.77,257.81,203.84
+Greg Brown III,2021,201.3,271.78,214.0
+Jared Butler,2021,188.59,250.19,193.04
+Justin Champagnie,2021,197.49,264.16,207.01
+Josh Christopher,2021,191.13,256.54,206.38
+Ayo Dosunmu,2021,191.77,259.08,208.91
+David Duke Jr.,2021,193.68,260.35,205.1
+Kessler Edwards,2021,200.66,269.24,211.46
+Luka Garza,2021,208.28,273.05,217.17
+RaiQuan Gray,2021,199.39,266.7,210.19
+Quentin Grimes,2021,193.04,256.54,203.2
+Sam Hauser,2021,200.03,259.08,206.38
+Aaron Henry,2021,194.31,262.89,210.19
+Matt Hurt,2021,204.47,270.51,207.01
+Nah'Shon Hyland,2021,187.96,257.81,206.38
+David Johnson,2021,191.13,264.16,209.55
+Jalen Johnson,2021,202.56,269.24,214.0
+Keon Johnson,2021,191.77,246.38,201.3
+Carlik Jones,2021,182.88,247.65,195.58
+Kai Jones,2021,208.28,280.67,217.81
+Herbert Jones,2021,198.12,269.24,214.0
+Corey Kispert,2021,198.12,259.08,200.66
+AJ Lawson,2021,196.85,252.73,200.03
+Scottie Lewis,2021,193.04,257.81,213.36
+Isaiah Livers,2021,197.49,265.43,206.38
+Makur Maker,2021,208.91,284.48,217.81
+Sandro Mamukelashvili,2021,205.74,270.51,216.53
+Tre Mann,2021,191.13,250.19,193.04
+Miles McBride,2021,185.42,252.73,205.1
+Davion Mitchell,2021,182.88,245.11,193.68
+Isaiah Mobley,2021,203.2,273.05,220.98
+Moses Moody,2021,194.31,266.7,215.27
+Trey Murphy III,2021,201.93,267.97,213.36
+Daishen Nix,2021,190.5,254.0,200.03
+John Petty Jr.,2021,194.31,262.89,207.01
+Yves Pons,2021,196.85,264.16,215.27
+Jason Preston,2021,190.5,255.27,204.47
+Joshua Primo,2021,193.04,260.35,206.38
+Roko Prkacin,2021,201.93,271.78,210.82
+Neemias Queta,2021,211.46,285.75,223.52
+Austin Reaves,2021,194.31,256.54,198.75
+Jeremiah Robinson-Earl,2021,202.56,267.97,207.65
+Jericho Sims,2021,205.74,269.24,221.62
+Jaden Springer,2021,190.5,251.46,202.56
+DJ Steward,2021,184.78,250.19,200.66
+JT Thor,2021,204.47,279.4,221.62
+Isaiah Todd,2021,205.1,273.05,216.53
+Duane Washington Jr.,2021,188.59,256.54,202.56
+Trendon Watford,2021,201.93,266.7,219.08
+Joe Wieskamp,2021,197.49,261.62,210.82
+Aaron Wiggins,2021,194.31,261.62,207.65
+Ziaire Williams,2021,203.84,270.51,208.91
+Moses Wright,2021,202.56,271.78,215.27
+McKinley Wright IV,2021,180.97,238.76,196.22
+Marcus Zegarowski,2021,184.78,243.84,189.87
 Ochai Agbaji,2022,194.31,264.16,208.91
 Patrick Baldwin Jr.,2022,206.38,280.67,217.81
 Dominick Barlow,2022,205.1,275.59,220.98
@@ -1243,7 +1210,6 @@ Keon Ellis,2022,191.77,259.08,204.47
 Michael Foster Jr.,2022,202.56,278.13,214.0
 Collin Gillespie,2022,186.69,248.92,193.04
 Ron Harper Jr.,2022,193.04,267.97,216.53
-Harrison Ingram,2022,196.22,262.89,214.0
 Nikola Jovic,2022,207.01,275.59,214.0
 Johnny Juzang,2022,196.22,260.35,210.82
 Trevor Keels,2022,191.13,256.54,201.3
@@ -1255,7 +1221,6 @@ E.J. Liddell,2022,196.85,262.89,212.72
 Bennedict Mathurin,2022,194.31,264.16,205.74
 Matthew Mayer,2022,203.2,266.7,209.55
 Bryce McGowens,2022,196.22,262.89,205.1
-Leonard Miller,2022,204.47,270.51,218.44
 Aminu Mohammed,2022,191.77,264.16,210.82
 Iverson Molinar,2022,188.59,256.54,203.2
 Jean Montero,2022,185.42,250.19,196.22
@@ -1268,11 +1233,8 @@ David Roddy,2022,194.31,266.7,212.09
 Ryan Rollins,2022,187.96,255.27,207.65
 Dereon Seabron,2022,194.94,262.89,205.1
 Shaedon Sharpe,2022,193.68,262.89,212.09
-Terquavion Smith,2022,188.59,248.92,199.39
 Matteo Spagnolo,2022,193.04,259.08,203.2
-Julian Strawther,2022,197.49,265.43,207.01
 Dalen Terry,2022,198.12,269.24,215.27
-Drew Timme,2022,203.84,273.05,218.44
 Jabari Walker,2022,200.03,266.7,210.19
 TyTy Washington Jr.,2022,188.59,252.73,203.2
 Peyton Watson,2022,200.03,273.05,214.63
@@ -1282,12 +1244,9 @@ Jalen Williams,2022,194.31,267.97,219.08
 Jaylin Williams,2022,205.1,275.59,215.9
 Trevion Williams,2022,201.3,275.59,220.34
 Mark Williams,2022,213.36,297.18,229.87
-Trey Alexander,2023,191.13,257.81,208.28
 Amari Bailey,2023,191.13,262.89,200.66
 Emoni Bates,2023,203.84,266.7,205.74
-Reece Beekman,2023,186.69,255.27,200.66
 Anthony Black,2023,197.49,260.35,201.93
-Adem Bona,2023,203.84,280.67,
 Kobe Brown,2023,199.39,270.51,215.27
 Kobe Bufkin,2023,193.68,260.35,202.56
 Toumani Camara,2023,200.66,271.78,214.63
@@ -1295,14 +1254,10 @@ Sidy Cissoko,2023,196.85,264.16,207.65
 Jaylen Clark,2023,193.04,257.81,205.74
 Ricky Council IV,2023,195.58,261.62,205.74
 Gradey Dick,2023,198.75,256.54,205.1
-Nikola Djurisic,2023,200.66,259.08,203.84
-Zach Edey,2023,221.62,293.37,240.03
 Adam Flagler,2023,185.42,246.38,194.31
 Mouhamed Gueye,2023,208.91,280.67,221.62
 Jordan Hawkins,2023,193.68,257.81,200.03
-Coleman Hawkins,2023,204.47,275.59,214.0
 Taylor Hendricks,2023,203.84,271.78,214.63
-DaRon Holmes II,2023,205.74,276.86,214.63
 Jalen Hood-Schifino,2023,193.68,255.27,208.91
 GG Jackson,2023,203.84,269.24,212.09
 Andre Jackson Jr.,2023,196.85,261.62,207.65
@@ -1331,7 +1286,6 @@ Olivier-Maxence Prosper,2023,200.03,264.16,215.9
 Rayan Rupert,2023,198.12,269.24,218.44
 Adama Sanogo,2023,201.3,275.59,220.34
 Marcus Sasser,2023,186.06,252.73,200.66
-Terrence Shannon Jr.,2023,196.85,259.08,203.2
 Ben Sheppard,2023,196.22,254.0,202.56
 Jalen Slawson,2023,199.39,269.24,212.72
 Terquavion Smith,2023,189.23,248.92,200.03
