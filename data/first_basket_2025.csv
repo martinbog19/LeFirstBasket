@@ -401,3 +401,6 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412190SAS,2024-12-19,,SAS,ATL,2025,daniedy01,ATL,28.0,1,2.0,0,0,wembavi01,capelca01,sochaje01,SAS
 202412190TOR,2024-12-19,,TOR,BRK,2025,dickgr01,TOR,24.0,2,3.0,1,0,mogbojo01,claxtni01,johnske07,BRK
 202412190WAS,2024-12-19,,WAS,CHO,2025,bridgmi02,CHO,12.0,1,2.0,0,0,sarral01,willima07,ballla01,CHO
+202412200CLE,2024-12-20,,CLE,MIL,2025,mitchdo01,CLE,44.0,4,2.0,1,2,allenja01,lopezbr01,mobleev01,CLE
+202412200MIA,2024-12-20,,MIA,OKC,2025,adebaba01,MIA,46.0,2,2.0,0,1,adebaba01,harteis01,wallaca01,OKC
+202412200PHI,2024-12-20,,PHI,CHO,2025,maxeyty01,PHI,76.0,5,3.0,3,1,embiijo01,richani01,oubreke01,PHI
