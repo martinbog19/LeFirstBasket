@@ -83,8 +83,8 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
-      #with:
-        #token: ${{ secrets.YML_TOKEN }}
+      with:
+        token: ${{ secrets.YML_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
