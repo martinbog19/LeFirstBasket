@@ -404,3 +404,15 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412200CLE,2024-12-20,,CLE,MIL,2025,mitchdo01,CLE,44.0,4,2.0,1,2,allenja01,lopezbr01,mobleev01,CLE
 202412200MIA,2024-12-20,,MIA,OKC,2025,adebaba01,MIA,46.0,2,2.0,0,1,adebaba01,harteis01,wallaca01,OKC
 202412200PHI,2024-12-20,,PHI,CHO,2025,maxeyty01,PHI,76.0,5,3.0,3,1,embiijo01,richani01,oubreke01,PHI
+202412210ATL,2024-12-21,,ATL,MEM,2025,edeyza01,MEM,29.0,2,2.0,0,1,capelca01,edeyza01,pippesc02,MEM
+202412210BRK,2024-12-21,,BRK,UTA,2025,mykhasv01,UTA,17.0,1,2.0,0,0,claxtni01,kesslwa01,mykhasv01,UTA
+202412210CHI,2024-12-21,,CHI,BOS,2025,whitede01,BOS,14.0,2,1.0,0,1,vucevni01,porzikr01,brownja02,BOS
+202412210CLE,2024-12-21,,CLE,PHI,2025,garlada01,CLE,28.0,2,2.0,0,1,allenja01,drumman01,georgpa01,PHI
+202412210DAL,2024-12-21,,DAL,LAC,2025,washipj01,DAL,58.0,3,3.0,1,1,livelde01,zubaciv01,powelno01,LAC
+202412210MIL,2024-12-21,,MIL,WAS,2025,portibo01,MIL,16.0,1,2.0,0,0,lopezbr01,sarral01,jacksan01,MIL
+202412210MIN,2024-12-21,,MIN,GSW,2025,jackstr02,GSW,14.0,1,2.0,0,0,goberru01,jackstr02,anderky01,GSW
+202412210NOP,2024-12-21,,NOP,NYK,2025,brunsja01,NYK,14.0,1,3.0,0,0,missiyv01,townska01,bridgmi01,NYK
+202412210ORL,2024-12-21,,ORL,MIA,2025,caldwke01,ORL,19.0,1,2.0,0,0,bitadgo01,adebaba01,blackan01,ORL
+202412210PHO,2024-12-21,,PHO,DET,2025,bealbr01,PHO,48.0,3,2.0,1,1,nurkiju01,durenja01,jonesty01,PHO
+202412210SAC,2024-12-21,,SAC,LAL,2025,jamesle01,LAL,57.0,3,1.0,0,2,sabondo01,reaveau01,davisan02,LAL
+202412210SAS,2024-12-21,,SAS,POR,2025,vassede01,SAS,23.0,1,2.0,0,0,wembavi01,aytonde01,paulch01,SAS
