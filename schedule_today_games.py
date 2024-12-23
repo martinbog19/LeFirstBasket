@@ -122,6 +122,7 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add 'data/odds_first_basket.csv'
+          git add 'data/rotowire_lineups.csv'
           git commit -m "Write new odds"
           git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 """ % (left_hr, cron, left_hr)
