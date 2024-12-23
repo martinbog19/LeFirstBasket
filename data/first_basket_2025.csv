@@ -416,3 +416,6 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412210PHO,2024-12-21,,PHO,DET,2025,bealbr01,PHO,48.0,3,2.0,1,1,nurkiju01,durenja01,jonesty01,PHO
 202412210SAC,2024-12-21,,SAC,LAL,2025,jamesle01,LAL,57.0,3,1.0,0,2,sabondo01,reaveau01,davisan02,LAL
 202412210SAS,2024-12-21,,SAS,POR,2025,vassede01,SAS,23.0,1,2.0,0,0,wembavi01,aytonde01,paulch01,SAS
+202412220NOP,2024-12-22,,NOP,DEN,2025,murraja01,DEN,5.0,1,1.0,0,0,missiyv01,jokicni01,murraja01,DEN
+202412220SAC,2024-12-22,,SAC,IND,2025,siakapa01,IND,73.0,4,1.0,1,2,sabondo01,turnemy01,halibty01,IND
+202412220TOR,2024-12-22,,TOR,HOU,2025,smithja05,HOU,23.0,2,3.0,1,0,mogbojo01,sengual01,agbajoc01,TOR
