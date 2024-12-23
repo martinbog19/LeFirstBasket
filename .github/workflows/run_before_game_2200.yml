@@ -1,8 +1,8 @@
-name: Run Before NBA Games [16:00]
+name: Run Before NBA Games [22:00]
 
 on:
   schedule:
-  - cron: '5 20 22 12 *'
+  - cron: '5 2 24 12 *'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - name: Run Before Game Script
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          START_TIME: 16
+          START_TIME: 22
         run: python run_before_game.py --start-time $START_TIME
 
       - name: Commit and Push csv
@@ -32,5 +32,6 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add 'data/odds_first_basket.csv'
+          git add 'data/rotowire_lineups.csv'
           git commit -m "Write new odds"
           git push https://x-access-token:${{ secrets.YML_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
