@@ -419,3 +419,17 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412220NOP,2024-12-22,,NOP,DEN,2025,murraja01,DEN,5.0,1,1.0,0,0,missiyv01,jokicni01,murraja01,DEN
 202412220SAC,2024-12-22,,SAC,IND,2025,siakapa01,IND,73.0,4,1.0,1,2,sabondo01,turnemy01,halibty01,IND
 202412220TOR,2024-12-22,,TOR,HOU,2025,smithja05,HOU,23.0,2,3.0,1,0,mogbojo01,sengual01,agbajoc01,TOR
+202412230ATL,2024-12-23,,ATL,MIN,2025,edwaran01,MIN,14.0,1,2.0,0,0,capelca01,goberru01,conlemi01,MIN
+202412230CHI,2024-12-23,,CHI,MIL,2025,whiteco01,CHI,51.0,4,2.0,1,2,vucevni01,lopezbr01,middlkh01,MIL
+202412230CHO,2024-12-23,,CHO,HOU,2025,smithja05,HOU,33.0,2,2.0,1,0,willima07,sengual01,ballla01,CHO
+202412230CLE,2024-12-23,,CLE,UTA,2025,pottemi01,UTA,28.0,2,3.0,1,0,allenja01,kesslwa01,mobleev01,CLE
+202412230DAL,2024-12-23,,DAL,POR,2025,thompkl01,DAL,61.0,4,3.0,1,2,livelde01,aytonde01,grantje01,POR
+202412230DEN,2024-12-23,,DEN,PHO,2025,bealbr01,PHO,19.0,1,2.0,0,0,jokicni01,nurkiju01,jonesty01,PHO
+202412230GSW,2024-12-23,,GSW,IND,2025,schrode01,GSW,27.0,3,2.0,1,1,jackstr02,turnemy01,greendr01,GSW
+202412230LAL,2024-12-23,,LAL,DET,2025,cunnica01,DET,15.0,1,1.0,0,0,davisan02,durenja01,iveyja01,DET
+202412230MEM,2024-12-23,,MEM,LAC,2025,banede01,MEM,33.0,4,3.0,1,2,edeyza01,zubaciv01,jacksja02,MEM
+202412230MIA,2024-12-23,,MIA,BRK,2025,johnsca02,BRK,61.0,3,3.0,1,1,adebaba01,claxtni01,herroty01,MIA
+202412230NYK,2024-12-23,,NYK,TOR,2025,barrerj01,TOR,39.0,2,2.0,1,0,townska01,mogbojo01,hartjo01,NYK
+202412230OKC,2024-12-23,,OKC,WAS,2025,joeis01,OKC,58.0,3,3.0,1,1,harteis01,valanjo01,gilgesh01,OKC
+202412230ORL,2024-12-23,,ORL,BOS,2025,brownja02,BOS,44.0,3,2.0,1,1,bitadgo01,porzikr01,horfoal01,BOS
+202412230PHI,2024-12-23,,PHI,SAS,2025,embiijo01,PHI,32.0,2,1.0,0,1,embiijo01,wembavi01,sochaje01,SAS
