@@ -447,3 +447,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412260POR,2024-12-26,,POR,UTA,2025,markkla01,UTA,28.0,1,3.0,0,0,aytonde01,kesslwa01,camarto01,POR
 202412260SAC,2024-12-26,,SAC,DET,2025,iveyja01,DET,21.0,1,3.0,0,0,lenal01,durenja01,monkma01,SAC
 202412260WAS,2024-12-26,,WAS,CHO,2025,bridgmi02,CHO,11.0,1,2.0,0,0,sarral01,willima07,millebr02,CHO
+202412270BOS,2024-12-27,,BOS,IND,2025,tatumja01,BOS,75.0,5,2.0,2,2,horfoal01,turnemy01,halibty01,IND
+202412270BRK,2024-12-27,,BRK,SAS,2025,johnske07,BRK,48.0,3,2.0,0,2,claxtni01,wembavi01,sochaje01,SAS
+202412270DEN,2024-12-27,,DEN,CLE,2025,westbru01,DEN,21.0,1,2.0,0,0,jokicni01,allenja01,portemi01,DEN
+202412270HOU,2024-12-27,,HOU,MIN,2025,randlju01,MIN,28.0,3,3.0,0,2,sengual01,goberru01,randlju01,MIN
+202412270LAC,2024-12-27,,LAC,GSW,2025,zubaciv01,LAC,18.0,1,2.0,0,0,zubaciv01,jackstr02,powelno01,LAC
+202412270NOP,2024-12-27,,NOP,MEM,2025,edeyza01,MEM,12.0,1,2.0,0,0,missiyv01,edeyza01,moranja01,MEM
+202412270ORL,2024-12-27,,ORL,NYK,2025,suggsja01,ORL,41.0,2,3.0,0,1,bitadgo01,townska01,bridgmi01,NYK
+202412270PHO,2024-12-27,,PHO,DAL,2025,gaffoda01,DAL,42.0,3,2.0,1,1,nurkiju01,gaffoda01,irvinky01,DAL
