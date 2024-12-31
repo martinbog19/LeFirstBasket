@@ -470,3 +470,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202412290OKC,2024-12-29,,OKC,MEM,2025,wellsja01,MEM,68.0,5,2.0,2,2,harteis01,jacksja02,konchjo01,MEM
 202412290ORL,2024-12-29,,ORL,BRK,2025,bitadgo01,ORL,25.0,1,2.0,0,0,bitadgo01,claxtni01,suggsja01,ORL
 202412290TOR,2024-12-29,,TOR,ATL,2025,risacza01,ATL,86.0,6,3.0,0,5,poeltja01,capelca01,johnsja05,ATL
+202412300CHO,2024-12-30,,CHO,CHI,2025,phillju01,CHI,16.0,1,1.0,0,0,willima07,vucevni01,micicva01,CHO
+202412300GSW,2024-12-30,,GSW,CLE,2025,wiggian01,GSW,58.0,5,2.0,1,3,jackstr02,allenja01,mobleev01,CLE
+202412300NOP,2024-12-30,,NOP,LAC,2025,murrade01,NOP,37.0,2,2.0,0,1,missiyv01,zubaciv01,hardeja01,LAC
+202412300POR,2024-12-30,,POR,PHI,2025,simonan01,POR,16.0,1,3.0,0,0,aytonde01,embiijo01,simonan01,POR
+202412300SAC,2024-12-30,,SAC,DAL,2025,gaffoda01,DAL,58.0,3,2.0,1,1,sabondo01,gaffoda01,dinwisp01,DAL
+202412300UTA,2024-12-30,,UTA,DEN,2025,georgke01,UTA,21.0,1,3.0,0,0,kesslwa01,jokicni01,georgke01,UTA
+202412300WAS,2024-12-30,,WAS,NYK,2025,sarral01,WAS,23.0,1,3.0,0,0,sarral01,townska01,brogdma01,WAS
