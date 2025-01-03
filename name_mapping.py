@@ -28,11 +28,12 @@ merged_check = merged.copy()[merged['player_id'].notna()]
 assert odds['name_norm'].value_counts().max() == 1, 'Normalized name duplicate in merged_check'
 assert odds['player_id'].value_counts().max() == 1, 'Duplicated player_id in merged_check'
 
-name_map_add = dict(zip(merged_check['name'], merged_check['player_id']))
-
-
-with open('utils/name_map_odds.json', 'w') as f:
-    json.dump(name_map | name_map_add, f, indent = 4)
+if merged_check.shape[0] > 0 :
+    name_map_add = dict(zip(merged_check['name'], merged_check['player_id']))
+    with open('utils/name_map_odds.json', 'w') as f:
+        json.dump(name_map | name_map_add, f, indent = 4)
+else :
+    print('No players automatically added to name map...')
 
 
 merged_need = merged.copy()[merged['player_id'].isna()]
@@ -70,4 +71,7 @@ if merged_need.shape[0] > 0:
         server.starttls()  # Upgrade connection to secure
         server.login(my_mail, app_password)  # Login with app password
         server.sendmail(my_mail, ['martinbog19@gmail.com'], mail.as_string())
-    print("Email sent successfully!")
+    print('Email sent successfully!')
+
+else :
+    print('No players required manual matching...')
