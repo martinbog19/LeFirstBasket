@@ -44,8 +44,10 @@ def get_players(year) :
     players = pd.read_html(str(table))[0].rename(columns = {'Player': 'name'})
     players['name_norm'] = players['name'].apply(normalize_name)
     players['player_id'] = [getId(x) for x in table.find_all('a', href = True) if 'players' in x['href']]
-    # players = players.copy()[players['GS'] > 0]
-    # !!!Need to do something about players on multiple teams!!!!!!
+    players = players[
+        (players.groupby('player_id')['player_id'].transform('count') == 1) # Only one team
+        | players['Team'].str.match(r'^\d+TM$')                             # Total row
+    ]
     players = players.drop_duplicates().reset_index(drop = True)
 
     return players
