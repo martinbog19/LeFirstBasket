@@ -497,3 +497,12 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501020MIL,2025-01-02,,MIL,BRK,2025,johnske07,BRK,36.0,2,2.0,1,0,lopezbr01,claxtni01,antetgi01,MIL
 202501020MIN,2025-01-02,,MIN,BOS,2025,mcdanja02,MIN,44.0,4,1.0,2,1,goberru01,horfoal01,mcdanja02,MIN
 202501020OKC,2025-01-02,,OKC,LAC,2025,gilgesh01,OKC,25.0,2,1.0,0,1,harteis01,zubaciv01,jonesde02,LAC
+202501030DAL,2025-01-03,,DAL,CLE,2025,washipj01,DAL,43.0,4,2.0,1,2,livelde01,allenja01,garlada01,CLE
+202501030DEN,2025-01-03,,DEN,SAS,2025,portemi01,DEN,41.0,2,2.0,0,1,jokicni01,wembavi01,vassede01,SAS
+202501030DET,2025-01-03,,DET,CHO,2025,bridgmi02,CHO,50.0,3,2.0,1,1,durenja01,willima07,micicva01,CHO
+202501030HOU,2025-01-03,,HOU,BOS,2025,sengual01,HOU,27.0,3,2.0,1,1,sengual01,porzikr01,whitede01,BOS
+202501030LAL,2025-01-03,,LAL,ATL,2025,davisan02,LAL,43.0,3,2.0,1,1,davisan02,capelca01,jamesle01,LAL
+202501030NOP,2025-01-03,,NOP,WAS,2025,mccolcj01,NOP,24.0,2,2.0,0,1,missiyv01,sarral01,carrica01,WAS
+202501030OKC,2025-01-03,,OKC,NYK,2025,dortlu01,OKC,15.0,1,3.0,0,0,harteis01,townska01,wallaca01,OKC
+202501030SAC,2025-01-03,,SAC,MEM,2025,monkma01,SAC,80.0,8,3.0,5,2,sabondo01,jacksja02,elliske01,SAC
+202501030TOR,2025-01-03,,TOR,ORL,2025,poeltja01,TOR,21.0,1,2.0,0,0,poeltja01,bitadgo01,quickim01,TOR
