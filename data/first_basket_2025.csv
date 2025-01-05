@@ -506,3 +506,12 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501030OKC,2025-01-03,,OKC,NYK,2025,dortlu01,OKC,15.0,1,3.0,0,0,harteis01,townska01,wallaca01,OKC
 202501030SAC,2025-01-03,,SAC,MEM,2025,monkma01,SAC,80.0,8,3.0,5,2,sabondo01,jacksja02,elliske01,SAC
 202501030TOR,2025-01-03,,TOR,ORL,2025,poeltja01,TOR,21.0,1,2.0,0,0,poeltja01,bitadgo01,quickim01,TOR
+202501040BRK,2025-01-04,,BRK,PHI,2025,russeda01,BRK,7.0,1,3.0,0,0,claxtni01,embiijo01,willizi02,BRK
+202501040CHI,2025-01-04,,CHI,NYK,2025,lavinza01,CHI,14.0,1,3.0,0,0,vucevni01,townska01,giddejo01,CHI
+202501040DET,2025-01-04,,DET,MIN,2025,cunnica01,DET,23.0,2,2.0,0,1,durenja01,goberru01,edwaran01,MIN
+202501040GSW,2025-01-04,,GSW,MEM,2025,banede01,MEM,15.0,1,2.0,0,0,jackstr02,edeyza01,jacksja02,MEM
+202501040IND,2025-01-04,,IND,PHO,2025,mathube01,IND,56.0,3,2.0,1,1,turnemy01,plumlma01,bealbr01,PHO
+202501040LAC,2025-01-04,,LAC,ATL,2025,powelno01,LAC,17.0,1,2.0,0,0,zubaciv01,capelca01,hardeja01,LAC
+202501040MIA,2025-01-04,,MIA,UTA,2025,collijo01,UTA,54.0,4,1.0,2,1,adebaba01,kesslwa01,herroty01,MIA
+202501040MIL,2025-01-04,,MIL,POR,2025,avdijde01,POR,47.0,3,3.0,1,1,lopezbr01,aytonde01,camarto01,POR
+202501040SAS,2025-01-04,,SAS,DEN,2025,murraja01,DEN,54.0,3,2.0,0,2,wembavi01,jokicni01,westbru01,DEN
