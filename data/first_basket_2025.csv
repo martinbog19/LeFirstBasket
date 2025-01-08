@@ -530,3 +530,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501060PHI,2025-01-06,,PHI,PHO,2025,duranke01,PHO,29.0,1,3.0,0,0,yabusgu01,plumlma01,martica02,PHI
 202501060SAC,2025-01-06,,SAC,MIA,2025,elliske01,SAC,75.0,4,1.0,2,1,sabondo01,adebaba01,highsha01,MIA
 202501060TOR,2025-01-06,,TOR,MIL,2025,poeltja01,TOR,57.0,4,2.0,1,2,poeltja01,lopezbr01,lillada01,MIL
+202501070CHO,2025-01-07,,CHO,PHO,2025,bookede01,PHO,37.0,3,2.0,2,0,willima07,plumlma01,ballla01,CHO
+202501070DAL,2025-01-07,,DAL,LAL,2025,reaveau01,LAL,17.0,1,3.0,0,0,livelde01,davisan02,chrisma02,LAL
+202501070DEN,2025-01-07,,DEN,BOS,2025,porzikr01,BOS,16.0,1,2.0,0,0,saricda01,porzikr01,horfoal01,BOS
+202501070GSW,2025-01-07,,GSW,MIA,2025,adebaba01,MIA,24.0,1,2.0,0,0,jackstr02,adebaba01,herroty01,MIA
+202501070NOP,2025-01-07,,NOP,MIN,2025,randlju01,MIN,20.0,1,2.0,0,0,missiyv01,goberru01,mcdanja02,MIN
+202501070UTA,2025-01-07,,UTA,ATL,2025,risacza01,ATL,21.0,2,2.0,1,0,kesslwa01,capelca01,colliis01,UTA
+202501070WAS,2025-01-07,,WAS,HOU,2025,kuzmaky01,WAS,25.0,3,1.0,1,1,sarral01,sengual01,thompam01,HOU
