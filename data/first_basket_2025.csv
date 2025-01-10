@@ -545,3 +545,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501080NOP,2025-01-08,,NOP,POR,2025,avdijde01,POR,18.0,1,3.0,0,0,missiyv01,aytonde01,avdijde01,POR
 202501080NYK,2025-01-08,,NYK,TOR,2025,quickim01,TOR,35.0,2,3.0,0,1,townska01,poeltja01,quickim01,TOR
 202501080PHI,2025-01-08,,PHI,WAS,2025,valanjo01,WAS,28.0,2,2.0,0,1,yabusgu01,valanjo01,valanjo01,WAS
+202501090CLE,2025-01-09,,CLE,TOR,2025,quickim01,TOR,23.0,1,2.0,0,0,allenja01,poeltja01,mobleev01,CLE
+202501090DAL,2025-01-09,,DAL,POR,2025,simonan01,POR,37.0,4,3.0,1,2,livelde01,aytonde01,washipj01,DAL
+202501090DET,2025-01-09,,DET,GSW,2025,hieldbu01,GSW,35.0,2,2.0,1,0,durenja01,jackstr02,beaslma01,DET
+202501090MEM,2025-01-09,,MEM,HOU,2025,wellsja01,MEM,14.0,1,1.0,0,0,edeyza01,sengual01,jacksja02,MEM
+202501090ORL,2025-01-09,,ORL,MIN,2025,goberru01,MIN,22.0,1,2.0,0,0,bitadgo01,goberru01,divindo01,MIN
+202501090PHO,2025-01-09,,PHO,ATL,2025,bookede01,PHO,61.0,4,2.0,2,1,plumlma01,capelca01,youngtr01,ATL
+202501090UTA,2025-01-09,,UTA,MIA,2025,jaqueja01,MIA,26.0,1,3.0,0,0,kesslwa01,adebaba01,highsha01,MIA
