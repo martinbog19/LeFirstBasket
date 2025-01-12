@@ -559,3 +559,7 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501100NYK,2025-01-10,,NYK,OKC,2025,brunsja01,NYK,53.0,3,1.0,1,1,townska01,harteis01,hartjo01,NYK
 202501100ORL,2025-01-10,,ORL,MIL,2025,princta02,MIL,43.0,2,3.0,0,1,bitadgo01,lopezbr01,jacksan01,MIL
 202501100PHI,2025-01-10,,PHI,NOP,2025,georgpa01,PHI,124.0,6,2.0,2,3,yabusgu01,missiyv01,greenja02,NOP
+202501110DET,2025-01-11,,DET,TOR,2025,hardati02,DET,22.0,1,1.0,0,0,durenja01,poeltja01,dickgr01,TOR
+202501110MIN,2025-01-11,,MIN,MEM,2025,goberru01,MIN,12.0,1,2.0,0,0,goberru01,edeyza01,edwaran01,MIN
+202501110PHO,2025-01-11,,PHO,UTA,2025,plumlma01,PHO,21.0,2,2.0,1,0,plumlma01,kesslwa01,bookede01,PHO
+202501110POR,2025-01-11,,POR,MIA,2025,jaqueja01,MIA,17.0,1,2.0,0,0,clingdo01,adebaba01,herroty01,MIA
