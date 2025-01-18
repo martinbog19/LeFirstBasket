@@ -585,3 +585,12 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501160POR,2025-01-16,,POR,LAC,2025,powelno01,LAC,28.0,2,3.0,1,0,aytonde01,zubaciv01,hendesc01,POR
 202501160SAC,2025-01-16,,SAC,HOU,2025,monkma01,SAC,89.0,6,2.0,1,4,sabondo01,greenje02,thompam01,HOU
 202501160WAS,2025-01-16,,WAS,PHO,2025,bookede01,PHO,12.0,1,2.0,0,0,sarral01,plumlma01,dunnry01,PHO
+202501170BOS,2025-01-17,,BOS,ORL,2025,porzikr01,BOS,38.0,2,2.0,0,1,porzikr01,cartewe01,caldwke01,ORL
+202501170CHI,2025-01-17,,CHI,CHO,2025,willima07,CHO,17.0,1,2.0,0,0,vucevni01,willima07,ballla01,CHO
+202501170DAL,2025-01-17,,DAL,OKC,2025,washipj01,DAL,22.0,1,3.0,0,0,gaffoda01,willija07,dinwisp01,DAL
+202501170LAL,2025-01-17,,LAL,BRK,2025,hayesja02,LAL,17.0,1,2.0,0,0,hayesja02,claxtni01,jamesle01,LAL
+202501170MIA,2025-01-17,,MIA,DEN,2025,adebaba01,MIA,77.0,4,2.0,1,2,adebaba01,jokicni01,herroty01,MIA
+202501170MIL,2025-01-17,,MIL,TOR,2025,antetgi01,MIL,19.0,3,1.0,1,1,lopezbr01,poeltja01,poeltja01,TOR
+202501170NOP,2025-01-17,,NOP,UTA,2025,mykhasv01,UTA,41.0,2,3.0,1,0,theisda01,eubandr01,georgke01,UTA
+202501170NYK,2025-01-17,,NYK,MIN,2025,conlemi01,MIN,29.0,2,3.0,0,1,simsje01,goberru01,randlju01,MIN
+202501170SAS,2025-01-17,,SAS,MEM,2025,jacksja02,MEM,31.0,2,2.0,1,0,wembavi01,edeyza01,castlst01,SAS
