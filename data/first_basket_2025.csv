@@ -600,3 +600,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501180IND,2025-01-18,,IND,PHI,2025,oubreke01,PHI,16.0,1,3.0,0,0,turnemy01,drumman01,maxeyty01,PHI
 202501180MIN,2025-01-18,,MIN,CLE,2025,mitchdo01,CLE,17.0,1,2.0,0,0,goberru01,allenja01,leverca01,CLE
 202501180POR,2025-01-18,,POR,HOU,2025,williro04,POR,24.0,1,2.0,0,0,williro04,sengual01,sharpsh01,POR
+202501200CHO,2025-01-20,,CHO,DAL,2025,irvinky01,DAL,8.0,1,3.0,0,0,willima07,gaffoda01,irvinky01,DAL
+202501200CLE,2025-01-20,,CLE,PHO,2025,allenja01,CLE,16.0,2,2.0,1,0,allenja01,richani01,garlada01,CLE
+202501200GSW,2025-01-20,,GSW,BOS,2025,porzikr01,BOS,18.0,1,3.0,0,0,jackstr02,porzikr01,whitede01,BOS
+202501200HOU,2025-01-20,,HOU,DET,2025,thompau01,DET,45.0,2,2.0,0,1,sengual01,durenja01,cunnica01,DET
+202501200LAC,2025-01-20,,LAC,CHI,2025,bambamo01,LAC,35.0,3,2.0,1,1,bambamo01,vucevni01,giddejo01,CHI
+202501200MEM,2025-01-20,,MEM,MIN,2025,banede01,MEM,12.0,1,3.0,0,0,edeyza01,goberru01,wellsja01,MEM
+202501200NOP,2025-01-20,,NOP,UTA,2025,kesslwa01,UTA,86.0,4,2.0,2,1,theisda01,kesslwa01,murphtr02,NOP
+202501200NYK,2025-01-20,,NYK,ATL,2025,johnsja05,ATL,13.0,1,2.0,0,0,townska01,okongon01,johnsja05,ATL
