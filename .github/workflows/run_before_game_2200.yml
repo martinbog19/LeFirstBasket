@@ -1,8 +1,8 @@
-name: Run Before NBA Games [13:00]
+name: Run Before NBA Games [22:00]
 
 on:
   schedule:
-  - cron: '5 17 19 1 *'
+  - cron: '5 2 22 1 *'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
       - name: Run Before Game Script
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          START_TIME: 13
+          START_TIME: 22
         run: python run_before_game.py --start-time $START_TIME
 
       - name: Commit and Push csv
