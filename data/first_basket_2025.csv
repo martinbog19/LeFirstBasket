@@ -613,3 +613,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501210LAL,2025-01-21,,LAL,WAS,2025,coulibi01,WAS,104.0,6,2.0,3,2,davisan02,sarral01,chrisma02,LAL
 202501210MIA,2025-01-21,,MIA,POR,2025,butleji01,MIA,46.0,5,2.0,2,2,wareke01,aytonde01,adebaba01,MIA
 202501210TOR,2025-01-21,,TOR,ORL,2025,caldwke01,ORL,37.0,2,2.0,0,1,poeltja01,cartewe01,blackan01,ORL
+202501220ATL,2025-01-22,,ATL,DET,2025,cunnica01,DET,32.0,1,2.0,0,0,okongon01,durenja01,cunnica01,DET
+202501220BRK,2025-01-22,,BRK,PHO,2025,dunnry01,PHO,110.0,6,2.0,3,2,claxtni01,richani01,martity01,BRK
+202501220DAL,2025-01-22,,DAL,MIN,2025,washipj01,DAL,22.0,2,2.0,0,1,gaffoda01,goberru01,edwaran01,MIN
+202501220HOU,2025-01-22,,HOU,CLE,2025,greenja05,HOU,26.0,1,2.0,0,0,sengual01,allenja01,greenja05,HOU
+202501220LAC,2025-01-22,,LAC,BOS,2025,mannte01,LAC,20.0,2,1.0,1,0,bambamo01,kornelu01,coffeam01,LAC
+202501220MEM,2025-01-22,,MEM,CHO,2025,moranja01,MEM,41.0,2,3.0,0,1,edeyza01,willima07,bridgmi02,CHO
+202501220OKC,2025-01-22,,OKC,UTA,2025,willija07,OKC,41.0,2,3.0,1,0,willija07,kesslwa01,gilgesh01,OKC
+202501220SAC,2025-01-22,,SAC,GSW,2025,hieldbu01,GSW,60.0,4,3.0,1,2,sabondo01,looneke01,hieldbu01,GSW
