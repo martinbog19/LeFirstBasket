@@ -621,3 +621,12 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501220MEM,2025-01-22,,MEM,CHO,2025,moranja01,MEM,41.0,2,3.0,0,1,edeyza01,willima07,bridgmi02,CHO
 202501220OKC,2025-01-22,,OKC,UTA,2025,willija07,OKC,41.0,2,3.0,1,0,willija07,kesslwa01,gilgesh01,OKC
 202501220SAC,2025-01-22,,SAC,GSW,2025,hieldbu01,GSW,60.0,4,3.0,1,2,sabondo01,looneke01,hieldbu01,GSW
+202501230ATL,2025-01-23,,ATL,TOR,2025,dickgr01,TOR,22.0,1,1.0,0,0,okongon01,poeltja01,barnesc01,TOR
+202501230DEN,2025-01-23,,DEN,SAC,2025,murraja01,DEN,14.0,1,1.0,0,0,jokicni01,sabondo01,murraja01,DEN
+202501230GSW,2025-01-23,,GSW,CHI,2025,balllo01,CHI,36.0,2,3.0,1,0,jackstr02,vucevni01,wiggian01,GSW
+202501230IND,2025-01-23,,IND,SAS,2025,siakapa01,IND,30.0,2,2.0,0,1,turnemy01,wembavi01,barneha02,SAS
+202501230LAC,2025-01-23,,LAC,WAS,2025,powelno01,LAC,20.0,1,2.0,0,0,zubaciv01,sarral01,carrica01,WAS
+202501230LAL,2025-01-23,,LAL,BOS,2025,chrisma02,LAL,43.0,3,3.0,1,1,davisan02,porzikr01,jamesle01,LAL
+202501230MIL,2025-01-23,,MIL,MIA,2025,herroty01,MIA,46.0,3,3.0,1,1,lopezbr01,wareke01,lillada01,MIL
+202501230OKC,2025-01-23,,OKC,DAL,2025,willija07,OKC,35.0,2,3.0,1,0,willija07,gaffoda01,dinwisp01,DAL
+202501230ORL,2025-01-23,,ORL,POR,2025,blackan01,ORL,23.0,2,2.0,0,1,cartewe01,williro04,simonan01,POR
