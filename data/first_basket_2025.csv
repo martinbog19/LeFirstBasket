@@ -630,3 +630,6 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501230MIL,2025-01-23,,MIL,MIA,2025,herroty01,MIA,46.0,3,3.0,1,1,lopezbr01,wareke01,lillada01,MIL
 202501230OKC,2025-01-23,,OKC,DAL,2025,willija07,OKC,35.0,2,3.0,1,0,willija07,gaffoda01,dinwisp01,DAL
 202501230ORL,2025-01-23,,ORL,POR,2025,blackan01,ORL,23.0,2,2.0,0,1,cartewe01,williro04,simonan01,POR
+202501240CHO,2025-01-24,,CHO,POR,2025,simonan01,POR,36.0,2,2.0,1,0,willima07,clingdo01,micicva01,CHO
+202501240MEM,2025-01-24,,MEM,NOP,2025,banede01,MEM,14.0,1,2.0,0,0,edeyza01,missiyv01,kennalu01,MEM
+202501240PHI,2025-01-24,,PHI,CLE,2025,yabusgu01,PHI,39.0,2,3.0,0,1,yabusgu01,allenja01,mitchdo01,CLE
