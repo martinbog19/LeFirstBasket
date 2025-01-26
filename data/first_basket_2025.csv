@@ -633,3 +633,17 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501240CHO,2025-01-24,,CHO,POR,2025,simonan01,POR,36.0,2,2.0,1,0,willima07,clingdo01,micicva01,CHO
 202501240MEM,2025-01-24,,MEM,NOP,2025,banede01,MEM,14.0,1,2.0,0,0,edeyza01,missiyv01,kennalu01,MEM
 202501240PHI,2025-01-24,,PHI,CLE,2025,yabusgu01,PHI,39.0,2,3.0,0,1,yabusgu01,allenja01,mitchdo01,CLE
+202501250ATL,2025-01-25,,ATL,TOR,2025,youngtr01,ATL,17.0,1,2.0,0,0,okongon01,poeltja01,youngtr01,ATL
+202501250BRK,2025-01-25,,BRK,MIA,2025,claxtni01,BRK,22.0,1,2.0,0,0,claxtni01,wareke01,russeda01,BRK
+202501250CHI,2025-01-25,,CHI,PHI,2025,georgpa01,PHI,129.0,7,2.0,3,3,vucevni01,yabusgu01,giddejo01,CHI
+202501250CHO,2025-01-25,,CHO,NOP,2025,bridgmi02,CHO,85.0,6,2.0,3,2,gibsota01,missiyv01,mccolcj01,NOP
+202501250CLE,2025-01-25,,CLE,HOU,2025,mitchdo01,CLE,11.0,1,2.0,0,0,allenja01,sengual01,mitchdo01,CLE
+202501250DAL,2025-01-25,,DAL,BOS,2025,dinwisp01,DAL,27.0,2,3.0,0,1,gaffoda01,porzikr01,whitede01,BOS
+202501250GSW,2025-01-25,,GSW,LAL,2025,finnedo01,LAL,16.0,1,3.0,0,0,jackstr02,davisan02,jamesle01,LAL
+202501250LAC,2025-01-25,,LAC,MIL,2025,jonesde02,LAC,30.0,2,2.0,0,1,zubaciv01,lopezbr01,antetgi01,MIL
+202501250MEM,2025-01-25,,MEM,UTA,2025,markkla01,UTA,14.0,1,2.0,0,0,edeyza01,kesslwa01,markkla01,UTA
+202501250MIN,2025-01-25,,MIN,DEN,2025,randlju01,MIN,19.0,1,2.0,0,0,goberru01,jokicni01,randlju01,MIN
+202501250NYK,2025-01-25,,NYK,SAC,2025,anunoog01,NYK,50.0,3,2.0,1,1,townska01,sabondo01,hartjo01,NYK
+202501250ORL,2025-01-25,,ORL,DET,2025,thompau01,DET,51.0,3,1.0,2,0,cartewe01,durenja01,suggsja01,ORL
+202501250PHO,2025-01-25,,PHO,WAS,2025,kuzmaky01,WAS,32.0,1,2.0,0,0,richani01,sarral01,dunnry01,PHO
+202501250SAS,2025-01-25,,SAS,IND,2025,nembhan01,IND,19.0,1,2.0,0,0,wembavi01,turnemy01,barneha02,SAS
