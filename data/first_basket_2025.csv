@@ -669,3 +669,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202501300POR,2025-01-30,,POR,ORL,2025,banchpa01,ORL,20.0,1,2.0,0,0,aytonde01,bitadgo01,banchpa01,ORL
 202501300UTA,2025-01-30,,UTA,MIN,2025,markkla01,UTA,37.0,3,3.0,1,1,kesslwa01,goberru01,colliis01,UTA
 202501300WAS,2025-01-30,,WAS,LAL,2025,hayesja02,LAL,15.0,1,1.0,0,0,valanjo01,hayesja02,chrisma02,LAL
+202501310CHO,2025-01-31,,CHO,LAC,2025,smithni01,CHO,20.0,1,2.0,0,0,gibsota01,zubaciv01,micicva01,CHO
+202501310DET,2025-01-31,,DET,DAL,2025,harrito02,DET,21.0,2,2.0,1,0,durenja01,gaffoda01,cunnica01,DET
+202501310GSW,2025-01-31,,GSW,PHO,2025,bookede01,PHO,35.0,2,3.0,1,0,postqu01,richani01,wiggian01,GSW
+202501310NOP,2025-01-31,,NOP,BOS,2025,brownja02,BOS,39.0,2,2.0,1,0,missiyv01,porzikr01,whitede01,BOS
+202501310PHI,2025-01-31,,PHI,DEN,2025,murraja01,DEN,25.0,1,2.0,0,0,yabusgu01,jokicni01,gordoaa01,DEN
+202501310SAS,2025-01-31,,SAS,MIL,2025,jacksan01,MIL,17.0,1,2.0,0,0,wembavi01,lopezbr01,antetgi01,MIL
+202501310TOR,2025-01-31,,TOR,CHI,2025,giddejo01,CHI,23.0,2,2.0,1,0,poeltja01,vucevni01,barnesc01,TOR
