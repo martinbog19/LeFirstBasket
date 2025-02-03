@@ -685,3 +685,8 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202502010POR,2025-02-01,,POR,PHO,2025,jonesty01,PHO,66.0,4,3.0,2,1,aytonde01,richani01,avdijde01,POR
 202502010SAS,2025-02-01,,SAS,MIA,2025,adebaba01,MIA,31.0,1,2.0,0,0,bassech01,wareke01,barneha02,SAS
 202502010UTA,2025-02-01,,UTA,ORL,2025,wagnefr01,ORL,87.0,6,3.0,2,3,kesslwa01,bitadgo01,collijo01,UTA
+202502020CLE,2025-02-02,,CLE,DAL,2025,mitchdo01,CLE,35.0,3,1.0,1,1,allenja01,kelleky01,mobleev01,CLE
+202502020DET,2025-02-02,,DET,CHI,2025,balllo01,CHI,21.0,2,3.0,0,1,durenja01,vucevni01,dosunay01,CHI
+202502020MIL,2025-02-02,,MIL,MEM,2025,kennalu01,MEM,17.0,1,2.0,0,0,lopezbr01,edeyza01,jacksja02,MEM
+202502020PHI,2025-02-02,,PHI,BOS,2025,tatumja01,BOS,46.0,3,1.0,1,1,yabusgu01,porzikr01,holidjr01,BOS
+202502020TOR,2025-02-02,,TOR,LAC,2025,jonesde02,LAC,23.0,2,2.0,1,0,poeltja01,zubaciv01,quickim01,TOR
