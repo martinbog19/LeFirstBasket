@@ -700,3 +700,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202502030OKC,2025-02-03,,OKC,MIL,2025,wiggiaa01,OKC,17.0,1,2.0,0,0,harteis01,livinch01,wiggiaa01,OKC
 202502030POR,2025-02-03,,POR,PHO,2025,grantje01,POR,27.0,2,3.0,1,0,aytonde01,richani01,grantje01,POR
 202502030UTA,2025-02-03,,UTA,IND,2025,halibty01,IND,18.0,1,1.0,0,0,kesslwa01,bryanth01,siakapa01,IND
+202502040BRK,2025-02-04,,BRK,HOU,2025,brookdi01,HOU,39.0,3,2.0,1,1,claxtni01,sengual01,willizi02,BRK
+202502040CHI,2025-02-04,,CHI,MIA,2025,robindu01,MIA,15.0,1,3.0,0,0,vucevni01,wareke01,herroty01,MIA
+202502040CLE,2025-02-04,,CLE,BOS,2025,allenja01,CLE,64.0,5,2.0,2,2,allenja01,porzikr01,garlada01,CLE
+202502040LAC,2025-02-04,,LAC,LAL,2025,hayesja02,LAL,18.0,1,2.0,0,0,zubaciv01,hayesja02,jamesle01,LAL
+202502040PHI,2025-02-04,,PHI,DAL,2025,exumda01,DAL,13.0,1,2.0,0,0,embiijo01,gaffoda01,exumda01,DAL
+202502040POR,2025-02-04,,POR,IND,2025,simonan01,POR,20.0,1,3.0,0,0,aytonde01,turnemy01,grantje01,POR
+202502040TOR,2025-02-04,,TOR,NYK,2025,dickgr01,TOR,29.0,1,2.0,0,0,poeltja01,townska01,dickgr01,TOR
