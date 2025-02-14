@@ -774,3 +774,8 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202502120TOR,2025-02-12,,TOR,CLE,2025,mitchdo01,CLE,17.0,1,1.0,0,0,mogbojo01,allenja01,garlada01,CLE
 202502120UTA,2025-02-12,,UTA,LAL,2025,hayesja02,LAL,46.0,3,2.0,1,1,kesslwa01,hayesja02,jamesle01,LAL
 202502120WAS,2025-02-12,,WAS,IND,2025,carrica01,WAS,67.0,3,2.0,1,1,sarral01,bryanth01,nembhan01,IND
+202502130DAL,2025-02-13,,DAL,MIA,2025,chrisma02,DAL,59.0,3,2.0,1,1,prospol01,wareke01,jaqueja01,MIA
+202502130HOU,2025-02-13,,HOU,GSW,2025,curryst01,GSW,98.0,5,3.0,3,1,thompam01,greendr01,sengual01,HOU
+202502130MIN,2025-02-13,,MIN,OKC,2025,edwaran01,MIN,81.0,5,1.0,2,2,reidna01,holmgch01,willija06,OKC
+202502130NOP,2025-02-13,,NOP,SAC,2025,greenja02,NOP,55.0,3,3.0,1,1,missiyv01,sabondo01,lavinza01,SAC
+202502130UTA,2025-02-13,,UTA,LAC,2025,collijo01,UTA,68.0,3,3.0,1,1,filipky01,zubaciv01,jonesde02,LAC
