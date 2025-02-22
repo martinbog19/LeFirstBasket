@@ -789,3 +789,12 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202502200PHI,2025-02-20,,PHI,BOS,2025,brownja02,BOS,19.0,1,2.0,0,0,embiijo01,porzikr01,tatumja01,BOS
 202502200POR,2025-02-20,,POR,LAL,2025,simonan01,POR,30.0,4,1.0,1,2,clingdo01,hayesja02,jamesle01,LAL
 202502200SAS,2025-02-20,,SAS,PHO,2025,foxde01,SAS,30.0,2,3.0,0,1,biyombi01,richani01,jonesty01,PHO
+202502210CLE,2025-02-21,,CLE,NYK,2025,brunsja01,NYK,23.0,1,2.0,0,0,allenja01,townska01,achiupr01,NYK
+202502210DAL,2025-02-21,,DAL,NOP,2025,murphtr02,NOP,9.0,1,3.0,0,0,washipj01,missiyv01,mccolcj01,NOP
+202502210HOU,2025-02-21,,HOU,MIN,2025,sengual01,HOU,19.0,1,2.0,0,0,sengual01,reidna01,easonta01,HOU
+202502210ORL,2025-02-21,,ORL,MEM,2025,jacksja02,MEM,16.0,1,2.0,0,0,cartewe01,edeyza01,jacksja02,MEM
+202502210SAC,2025-02-21,,SAC,GSW,2025,moodymo01,GSW,70.0,5,3.0,1,3,sabondo01,greendr01,podzibr01,GSW
+202502210SAS,2025-02-21,,SAS,DET,2025,harrito02,DET,56.0,2,1.0,1,0,biyombi01,durenja01,thompau01,DET
+202502210TOR,2025-02-21,,TOR,MIA,2025,robinor01,TOR,30.0,1,2.0,0,0,robinor01,wareke01,mitchda01,MIA
+202502210UTA,2025-02-21,,UTA,OKC,2025,holmgch01,OKC,23.0,1,3.0,0,0,kesslwa01,holmgch01,harteis01,OKC
+202502210WAS,2025-02-21,,WAS,MIL,2025,lopezbr01,MIL,59.0,4,2.0,1,2,sarral01,lopezbr01,georgky01,WAS
