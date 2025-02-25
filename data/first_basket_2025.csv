@@ -813,3 +813,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202502230NOP,2025-02-23,,NOP,SAS,2025,biyombi01,SAS,15.0,1,2.0,0,0,missiyv01,biyombi01,paulch01,SAS
 202502230ORL,2025-02-23,,ORL,WAS,2025,poolejo01,WAS,40.0,2,2.0,0,1,cartewe01,holmeri01,anthoco01,ORL
 202502230TOR,2025-02-23,,TOR,PHO,2025,bealbr01,PHO,19.0,1,2.0,0,0,robinor01,richani01,bookede01,PHO
+202502240ATL,2025-02-24,,ATL,MIA,2025,gueyemo02,ATL,43.0,4,2.0,1,2,okongon01,wareke01,daniedy01,ATL
+202502240DET,2025-02-24,,DET,LAC,2025,zubaciv01,LAC,39.0,4,2.0,1,2,durenja01,zubaciv01,hardeja01,LAC
+202502240IND,2025-02-24,,IND,DEN,2025,siakapa01,IND,19.0,1,2.0,0,0,turnemy01,jokicni01,gordoaa01,DEN
+202502240OKC,2025-02-24,,OKC,MIN,2025,harteis01,OKC,15.0,1,1.0,0,0,harteis01,reidna01,willija06,OKC
+202502240PHI,2025-02-24,,PHI,CHI,2025,oubreke01,PHI,6.0,1,2.0,0,0,yabusgu01,colliza01,oubreke01,PHI
+202502240SAC,2025-02-24,,SAC,CHO,2025,bridgmi02,CHO,59.0,4,3.0,1,2,sabondo01,nurkiju01,greenjo02,CHO
+202502240UTA,2025-02-24,,UTA,POR,2025,grantje01,POR,23.0,1,3.0,0,0,filipky01,clingdo01,avdijde01,POR
+202502240WAS,2025-02-24,,WAS,BRK,2025,poolejo01,WAS,18.0,1,3.0,0,0,holmeri01,claxtni01,georgky01,WAS
