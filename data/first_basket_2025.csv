@@ -878,3 +878,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503040ORL,2025-03-04,,ORL,TOR,2025,caldwke01,ORL,14.0,1,2.0,0,0,cartewe01,poeltja01,banchpa01,ORL
 202503040PHO,2025-03-04,,PHO,LAC,2025,hardeja01,LAC,41.0,1,1.0,0,0,bolbo01,zubaciv01,richani01,PHO
 202503040SAS,2025-03-04,,SAS,BRK,2025,biyombi01,SAS,41.0,2,2.0,0,1,biyombi01,claxtni01,foxde01,SAS
+202503050BOS,2025-03-05,,BOS,POR,2025,avdijde01,POR,46.0,4,1.0,1,2,kornelu01,clingdo01,whitede01,BOS
+202503050CHO,2025-03-05,,CHO,MIN,2025,bridgmi02,CHO,19.0,1,2.0,0,0,willima07,reidna01,ballla01,CHO
+202503050CLE,2025-03-05,,CLE,MIA,2025,mobleev01,CLE,45.0,5,1.0,3,1,allenja01,adebaba01,mobleev01,CLE
+202503050DEN,2025-03-05,,DEN,SAC,2025,valanjo01,SAC,33.0,4,2.0,1,2,jokicni01,valanjo01,braunch01,DEN
+202503050LAC,2025-03-05,,LAC,DET,2025,cunnica01,DET,38.0,2,2.0,1,0,zubaciv01,durenja01,hardeja01,LAC
+202503050MEM,2025-03-05,,MEM,OKC,2025,wallaca01,OKC,22.0,2,2.0,1,0,edeyza01,harteis01,banede01,MEM
+202503050MIL,2025-03-05,,MIL,DAL,2025,antetgi01,MIL,19.0,1,2.0,0,0,lopezbr01,poweldw01,antetgi01,MIL
+202503050WAS,2025-03-05,,WAS,UTA,2025,martike04,UTA,24.0,1,2.0,0,0,sarral01,filipky01,filipky01,UTA
