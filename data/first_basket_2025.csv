@@ -953,3 +953,13 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503160MIL,2025-03-16,,MIL,OKC,2025,holmgch01,OKC,32.0,2,3.0,1,0,lopezbr01,holmgch01,kuzmaky01,MIL
 202503160MIN,2025-03-16,,MIN,UTA,2025,mcdanja02,MIN,70.0,4,2.0,1,2,goberru01,kesslwa01,edwaran01,MIN
 202503160POR,2025-03-16,,POR,TOR,2025,clingdo01,POR,27.0,2,2.0,1,0,clingdo01,poeltja01,avdijde01,POR
+202503170GSW,2025-03-17,,GSW,DEN,2025,gordoaa01,DEN,29.0,2,1.0,1,0,postqu01,gordoaa01,greendr01,GSW
+202503170HOU,2025-03-17,,HOU,PHI,2025,grimequ01,PHI,33.0,4,3.0,3,0,sengual01,brissos01,easonta01,HOU
+202503170LAL,2025-03-17,,LAL,SAS,2025,vassede01,SAS,14.0,1,2.0,0,0,hayesja02,biyombi01,barneha02,SAS
+202503170MIN,2025-03-17,,MIN,IND,2025,goberru01,MIN,67.0,3,1.0,1,1,goberru01,bryanth01,edwaran01,MIN
+202503170NOP,2025-03-17,,NOP,DET,2025,durenja01,DET,49.0,2,1.0,0,1,missiyv01,durenja01,harrito02,DET
+202503170NYK,2025-03-17,,NYK,MIA,2025,herroty01,MIA,49.0,2,2.0,0,1,townska01,adebaba01,herroty01,MIA
+202503170PHO,2025-03-17,,PHO,TOR,2025,richani01,PHO,27.0,2,2.0,1,0,castlco01,richani01,duranke01,PHO
+202503170POR,2025-03-17,,POR,WAS,2025,middlkh01,WAS,35.0,2,2.0,1,0,clingdo01,sarral01,avdijde01,POR
+202503170SAC,2025-03-17,,SAC,MEM,2025,murrake02,SAC,15.0,1,2.0,0,0,sabondo01,edeyza01,monkma01,SAC
+202503170UTA,2025-03-17,,UTA,CHI,2025,huertke01,CHI,24.0,2,2.0,1,0,kesslwa01,vucevni01,colliis01,UTA
