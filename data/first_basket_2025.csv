@@ -967,3 +967,14 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503180CHO,2025-03-18,,CHO,ATL,2025,daniedy01,ATL,21.0,1,2.0,0,0,willima07,okongon01,daniedy01,ATL
 202503180GSW,2025-03-18,,GSW,MIL,2025,postqu01,GSW,37.0,3,3.0,1,1,postqu01,lopezbr01,butleji01,GSW
 202503180LAC,2025-03-18,,LAC,CLE,2025,strusma01,CLE,14.0,1,3.0,0,0,zubaciv01,allenja01,mobleev01,CLE
+202503190IND,2025-03-19,,IND,DAL,2025,nembhan01,IND,37.0,2,1.0,0,1,turnemy01,joneska01,washipj01,DAL
+202503190LAL,2025-03-19,,LAL,DEN,2025,hayesja02,LAL,18.0,1,2.0,0,0,hayesja02,gordoaa01,doncilu01,LAL
+202503190MIA,2025-03-19,,MIA,DET,2025,harrito02,DET,50.0,3,2.0,1,1,wareke01,durenja01,cunnica01,DET
+202503190MIN,2025-03-19,,MIN,NOP,2025,missiyv01,NOP,37.0,2,2.0,1,0,goberru01,missiyv01,randlju01,MIN
+202503190OKC,2025-03-19,,OKC,PHI,2025,joeis01,OKC,14.0,1,3.0,0,0,holmgch01,yabusgu01,jonesdi01,OKC
+202503190ORL,2025-03-19,,ORL,HOU,2025,josepco01,ORL,39.0,2,3.0,1,0,cartewe01,sengual01,caldwke01,ORL
+202503190PHO,2025-03-19,,PHO,CHI,2025,bookede01,PHO,39.0,3,2.0,1,1,richani01,vucevni01,jonestr01,CHI
+202503190POR,2025-03-19,,POR,MEM,2025,camarto01,POR,33.0,1,3.0,0,0,clingdo01,edeyza01,jacksja02,MEM
+202503190SAC,2025-03-19,,SAC,CLE,2025,mobleev01,CLE,22.0,1,2.0,0,0,valanjo01,allenja01,mobleev01,CLE
+202503190SAS,2025-03-19,,SAS,NYK,2025,townska01,NYK,33.0,2,3.0,1,0,sochaje01,townska01,barneha02,SAS
+202503190UTA,2025-03-19,,UTA,WAS,2025,johnsaj01,WAS,24.0,2,2.0,1,0,kesslwa01,sarral01,colliis01,UTA
