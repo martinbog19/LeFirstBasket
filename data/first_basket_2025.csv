@@ -978,3 +978,8 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503190SAC,2025-03-19,,SAC,CLE,2025,mobleev01,CLE,22.0,1,2.0,0,0,valanjo01,allenja01,mobleev01,CLE
 202503190SAS,2025-03-19,,SAS,NYK,2025,townska01,NYK,33.0,2,3.0,1,0,sochaje01,townska01,barneha02,SAS
 202503190UTA,2025-03-19,,UTA,WAS,2025,johnsaj01,WAS,24.0,2,2.0,1,0,kesslwa01,sarral01,colliis01,UTA
+202503200CHO,2025-03-20,,CHO,NYK,2025,willima07,CHO,36.0,3,2.0,1,1,willima07,townska01,hartjo01,NYK
+202503200GSW,2025-03-20,,GSW,TOR,2025,greendr01,GSW,20.0,1,3.0,0,0,greendr01,poeltja01,podzibr01,GSW
+202503200IND,2025-03-20,,IND,BRK,2025,johnske07,BRK,23.0,1,3.0,0,0,turnemy01,claxtni01,willizi02,BRK
+202503200LAL,2025-03-20,,LAL,MIL,2025,antetgi01,MIL,51.0,3,2.0,1,1,hayesja02,lopezbr01,rolliry01,MIL
+202503200SAC,2025-03-20,,SAC,CHI,2025,vucevni01,CHI,29.0,2,3.0,1,0,valanjo01,vucevni01,monkma01,SAC
