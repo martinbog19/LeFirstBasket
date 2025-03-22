@@ -983,3 +983,13 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503200IND,2025-03-20,,IND,BRK,2025,johnske07,BRK,23.0,1,3.0,0,0,turnemy01,claxtni01,willizi02,BRK
 202503200LAL,2025-03-20,,LAL,MIL,2025,antetgi01,MIL,51.0,3,2.0,1,1,hayesja02,lopezbr01,rolliry01,MIL
 202503200SAC,2025-03-20,,SAC,CHI,2025,vucevni01,CHI,29.0,2,3.0,1,0,valanjo01,vucevni01,monkma01,SAC
+202503210DAL,2025-03-21,,DAL,DET,2025,harrito02,DET,30.0,3,3.0,1,1,joneska01,durenja01,thompkl01,DAL
+202503210LAC,2025-03-21,,LAC,MEM,2025,powelno01,LAC,53.0,5,1.0,2,2,zubaciv01,jacksja02,aldamsa01,MEM
+202503210MIA,2025-03-21,,MIA,HOU,2025,greenja05,HOU,21.0,1,2.0,0,0,wareke01,sengual01,adebaba01,MIA
+202503210MIN,2025-03-21,,MIN,NOP,2025,brownbr01,NOP,45.0,3,2.0,1,1,goberru01,missiyv01,randlju01,MIN
+202503210OKC,2025-03-21,,OKC,CHO,2025,gilgesh01,OKC,72.0,5,2.0,3,1,holmgch01,nurkiju01,simpskj01,CHO
+202503210PHO,2025-03-21,,PHO,CLE,2025,mobleev01,CLE,89.0,7,3.0,4,2,ighodos01,allenja01,mitchdo01,CLE
+202503210POR,2025-03-21,,POR,DEN,2025,gordoaa01,DEN,19.0,1,2.0,0,0,camarto01,gordoaa01,portemi01,DEN
+202503210SAS,2025-03-21,,SAS,PHI,2025,sochaje01,SAS,15.0,1,2.0,0,0,sochaje01,yabusgu01,barneha02,SAS
+202503210UTA,2025-03-21,,UTA,BOS,2025,sextoco01,UTA,20.0,1,2.0,0,0,kesslwa01,porzikr01,sextoco01,UTA
+202503210WAS,2025-03-21,,WAS,ORL,2025,cartewe01,ORL,25.0,2,2.0,0,1,sarral01,cartewe01,josepco01,ORL
