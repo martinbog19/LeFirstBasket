@@ -2,7 +2,7 @@ name: Run Before NBA Games [16:00]
 
 on:
   schedule:
-  - cron: '5 19 22 3 *'
+  - cron: '5 19 23 3 *'
   workflow_dispatch:
 
 jobs:
