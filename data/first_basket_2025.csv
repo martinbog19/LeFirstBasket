@@ -1006,3 +1006,11 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503230POR,2025-03-23,,POR,BOS,2025,pritcpa01,BOS,33.0,2,3.0,1,0,clingdo01,horfoal01,avdijde01,POR
 202503230TOR,2025-03-23,,TOR,SAS,2025,castlst01,SAS,18.0,1,3.0,0,0,castlco01,biyombi01,barneha02,SAS
 202503230UTA,2025-03-23,,UTA,CLE,2025,mitchdo01,CLE,25.0,1,2.0,0,0,kesslwa01,allenja01,colliis01,UTA
+202503240BRK,2025-03-24,,BRK,DAL,2025,davisan02,DAL,18.0,1,2.0,0,0,claxtni01,joneska01,dinwisp01,DAL
+202503240DEN,2025-03-24,,DEN,CHI,2025,murraja01,DEN,15.0,1,2.0,0,0,jordade01,vucevni01,watsope01,DEN
+202503240IND,2025-03-24,,IND,MIN,2025,siakapa01,IND,80.0,5,2.0,2,2,turnemy01,goberru01,randlju01,MIN
+202503240NOP,2025-03-24,,NOP,PHI,2025,hawkijo01,NOP,29.0,2,2.0,1,0,missiyv01,yabusgu01,alvarjo01,NOP
+202503240ORL,2025-03-24,,ORL,LAL,2025,banchpa01,ORL,42.0,2,2.0,0,1,cartewe01,hayesja02,josepco01,ORL
+202503240PHO,2025-03-24,,PHO,MIL,2025,kuzmaky01,MIL,26.0,1,3.0,0,0,richani01,lopezbr01,gilleco01,PHO
+202503240SAC,2025-03-24,,SAC,BOS,2025,holidjr01,BOS,15.0,1,3.0,0,0,sabondo01,porzikr01,whitede01,BOS
+202503240WAS,2025-03-24,,WAS,TOR,2025,sarral01,WAS,68.0,4,3.0,2,1,sarral01,poeltja01,barnesc01,TOR
