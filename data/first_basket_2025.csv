@@ -1036,3 +1036,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503270SAC,2025-03-27,,SAC,POR,2025,sabondo01,SAC,20.0,1,2.0,0,0,sabondo01,clingdo01,elliske01,SAC
 202503270UTA,2025-03-27,,UTA,HOU,2025,willico04,UTA,14.0,1,2.0,0,0,kesslwa01,sengual01,colliis01,UTA
 202503270WAS,2025-03-27,,WAS,IND,2025,halibty01,IND,14.0,1,3.0,0,0,sarral01,turnemy01,siakapa01,IND
+202503280BRK,2025-03-28,,BRK,LAC,2025,leonaka01,LAC,17.0,1,2.0,0,0,claxtni01,zubaciv01,dunnkr01,LAC
+202503280DEN,2025-03-28,,DEN,UTA,2025,braunch01,DEN,85.0,7,2.0,3,3,jokicni01,filipky01,gordoaa01,DEN
+202503280DET,2025-03-28,,DET,CLE,2025,hardati02,DET,29.0,3,2.0,1,1,durenja01,allenja01,mobleev01,CLE
+202503280MIL,2025-03-28,,MIL,NYK,2025,kuzmaky01,MIL,20.0,1,2.0,0,0,lopezbr01,townska01,antetgi01,MIL
+202503280MIN,2025-03-28,,MIN,PHO,2025,richani01,PHO,39.0,2,2.0,1,0,goberru01,richani01,conlemi01,MIN
+202503280NOP,2025-03-28,,NOP,GSW,2025,alvarjo01,NOP,35.0,2,2.0,0,1,missiyv01,greendr01,curryst01,GSW
+202503280TOR,2025-03-28,,TOR,CHO,2025,jeffrda01,CHO,46.0,3,2.0,2,0,poeltja01,willima07,barnesc01,TOR
