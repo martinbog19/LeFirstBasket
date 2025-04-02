@@ -1066,3 +1066,10 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202503310OKC,2025-03-31,,OKC,CHI,2025,whiteco01,CHI,20.0,2,1.0,1,0,holmgch01,vucevni01,willija06,OKC
 202503310ORL,2025-03-31,,ORL,LAC,2025,banchpa01,ORL,40.0,3,1.0,1,1,cartewe01,zubaciv01,banchpa01,ORL
 202503310WAS,2025-03-31,,WAS,MIA,2025,poolejo01,WAS,30.0,2,3.0,0,1,sarral01,wareke01,herroty01,MIA
+202504010ATL,2025-04-01,,ATL,POR,2025,youngtr01,ATL,12.0,1,2.0,0,0,okongon01,clingdo01,daniedy01,ATL
+202504010CHI,2025-04-01,,CHI,TOR,2025,battlja01,TOR,6.0,1,3.0,0,0,vucevni01,poeltja01,barnesc01,TOR
+202504010DEN,2025-04-01,,DEN,MIN,2025,jokicni01,DEN,30.0,1,3.0,0,0,jokicni01,goberru01,edwaran01,MIN
+202504010MEM,2025-04-01,,MEM,GSW,2025,greendr01,GSW,18.0,1,3.0,0,0,edeyza01,greendr01,curryst01,GSW
+202504010MIL,2025-04-01,,MIL,PHO,2025,rolliry01,MIL,18.0,1,3.0,0,0,lopezbr01,richani01,antetgi01,MIL
+202504010NYK,2025-04-01,,NYK,PHI,2025,robinmi01,NYK,48.0,2,2.0,1,0,robinmi01,bonaad01,wrighde01,NYK
+202504010SAS,2025-04-01,,SAS,ORL,2025,biyombi01,SAS,16.0,1,2.0,0,0,biyombi01,cartewe01,barneha02,SAS
