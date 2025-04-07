@@ -1103,3 +1103,14 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202504050LAC,2025-04-05,,LAC,DAL,2025,hardeja01,LAC,36.0,1,2.0,0,0,zubaciv01,livelde01,thompkl01,DAL
 202504050MIA,2025-04-05,,MIA,MIL,2025,antetgi01,MIL,26.0,1,2.0,0,0,wareke01,lopezbr01,larsspe01,MIA
 202504050PHI,2025-04-05,,PHI,MIN,2025,yabusgu01,PHI,45.0,2,2.0,0,1,bonaad01,goberru01,conlemi01,MIN
+202504060ATL,2025-04-06,,ATL,UTA,2025,sextoco01,UTA,24.0,1,2.0,0,0,okongon01,filipky01,colliis01,UTA
+202504060BOS,2025-04-06,,BOS,WAS,2025,whitede01,BOS,32.0,3,3.0,2,0,kornelu01,sarral01,whitede01,BOS
+202504060BRK,2025-04-06,,BRK,TOR,2025,timmedr01,BRK,24.0,2,2.0,1,0,timmedr01,mogbojo01,beekmre01,BRK
+202504060CHO,2025-04-06,,CHO,CHI,2025,bridgmi02,CHO,22.0,1,2.0,0,0,willima07,vucevni01,simpskj01,CHO
+202504060CLE,2025-04-06,,CLE,SAC,2025,lylestr01,SAC,18.0,2,3.0,1,0,allenja01,sabondo01,mitchdo01,CLE
+202504060DEN,2025-04-06,,DEN,IND,2025,nesmiaa01,IND,52.0,3,3.0,1,1,jokicni01,turnemy01,pickeja02,DEN
+202504060GSW,2025-04-06,,GSW,HOU,2025,thompam01,HOU,64.0,4,2.0,2,1,greendr01,sengual01,podzibr01,GSW
+202504060NOP,2025-04-06,,NOP,MIL,2025,kuzmaky01,MIL,14.0,1,2.0,0,0,missiyv01,lopezbr01,kuzmaky01,MIL
+202504060NYK,2025-04-06,,NYK,PHO,2025,townska01,NYK,77.0,3,2.0,1,1,townska01,richani01,anunoog01,NYK
+202504060OKC,2025-04-06,,OKC,LAL,2025,harteis01,OKC,23.0,2,2.0,1,0,holmgch01,hayesja02,willija06,OKC
+202504060POR,2025-04-06,,POR,SAS,2025,sharpsh01,POR,15.0,1,3.0,0,0,clingdo01,biyombi01,camarto01,POR
