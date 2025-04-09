@@ -1116,3 +1116,13 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202504060POR,2025-04-06,,POR,SAS,2025,sharpsh01,POR,15.0,1,3.0,0,0,clingdo01,biyombi01,camarto01,POR
 202504070DET,2025-04-07,,DET,SAC,2025,cunnica01,DET,17.0,1,2.0,0,0,durenja01,sabondo01,schrode01,DET
 202504070MIA,2025-04-07,,MIA,PHI,2025,butleja02,PHI,43.0,2,2.0,1,0,wareke01,bonaad01,herroty01,MIA
+202504080BRK,2025-04-08,,BRK,NOP,2025,watfotr01,BRK,15.0,1,2.0,0,0,claxtni01,missiyv01,willizi02,BRK
+202504080CHO,2025-04-08,,CHO,MEM,2025,moranja01,MEM,18.0,1,2.0,0,0,willima07,edeyza01,jacksja02,MEM
+202504080CLE,2025-04-08,,CLE,CHI,2025,willipa01,CHI,42.0,3,3.0,1,1,allenja01,smithja04,willipa01,CHI
+202504080IND,2025-04-08,,IND,WAS,2025,sarral01,WAS,23.0,1,2.0,0,0,turnemy01,sarral01,carrica01,WAS
+202504080LAC,2025-04-08,,LAC,SAS,2025,zubaciv01,LAC,24.0,1,2.0,0,0,zubaciv01,biyombi01,paulch01,SAS
+202504080MIL,2025-04-08,,MIL,MIN,2025,randlju01,MIN,26.0,1,3.0,0,0,lopezbr01,goberru01,conlemi01,MIN
+202504080NYK,2025-04-08,,NYK,BOS,2025,brunsja01,NYK,50.0,3,2.0,1,1,townska01,porzikr01,anunoog01,NYK
+202504080OKC,2025-04-08,,OKC,LAL,2025,gilgesh01,OKC,10.0,1,2.0,0,0,holmgch01,hayesja02,gilgesh01,OKC
+202504080ORL,2025-04-08,,ORL,ATL,2025,okongon01,ATL,24.0,1,3.0,0,0,cartewe01,okongon01,josepco01,ORL
+202504080PHO,2025-04-08,,PHO,GSW,2025,podzibr01,GSW,42.0,2,3.0,1,0,richani01,greendr01,dunnry01,PHO
