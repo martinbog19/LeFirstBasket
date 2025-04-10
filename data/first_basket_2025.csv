@@ -1126,3 +1126,13 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202504080OKC,2025-04-08,,OKC,LAL,2025,gilgesh01,OKC,10.0,1,2.0,0,0,holmgch01,hayesja02,gilgesh01,OKC
 202504080ORL,2025-04-08,,ORL,ATL,2025,okongon01,ATL,24.0,1,3.0,0,0,cartewe01,okongon01,josepco01,ORL
 202504080PHO,2025-04-08,,PHO,GSW,2025,podzibr01,GSW,42.0,2,3.0,1,0,richani01,greendr01,dunnry01,PHO
+202504090CHI,2025-04-09,,CHI,MIA,2025,adebaba01,MIA,15.0,1,3.0,0,0,vucevni01,wareke01,adebaba01,MIA
+202504090DAL,2025-04-09,,DAL,LAL,2025,jamesle01,LAL,4.0,1,1.0,0,0,livelde01,hayesja02,jamesle01,LAL
+202504090GSW,2025-04-09,,GSW,SAS,2025,butleji01,GSW,31.0,1,2.0,0,0,greendr01,biyombi01,curryst01,GSW
+202504090LAC,2025-04-09,,LAC,HOU,2025,sheppre01,HOU,14.0,1,3.0,0,0,zubaciv01,landajo01,sheppre01,HOU
+202504090ORL,2025-04-09,,ORL,BOS,2025,cartewe01,ORL,20.0,1,2.0,0,0,cartewe01,kornelu01,josepco01,ORL
+202504090PHO,2025-04-09,,PHO,OKC,2025,bealbr01,PHO,32.0,2,2.0,0,1,ighodos01,holmgch01,wiggiaa01,OKC
+202504090SAC,2025-04-09,,SAC,DEN,2025,braunch01,DEN,60.0,4,3.0,2,1,sabondo01,jokicni01,elliske01,SAC
+202504090TOR,2025-04-09,,TOR,CHO,2025,simpskj01,CHO,58.0,3,1.0,1,1,robinor01,nurkiju01,salauti01,CHO
+202504090UTA,2025-04-09,,UTA,POR,2025,sharpsh01,POR,26.0,2,2.0,0,1,filipky01,clingdo01,camarto01,POR
+202504090WAS,2025-04-09,,WAS,PHI,2025,walkelo01,PHI,35.0,2,3.0,1,0,sarral01,bonaad01,carrica01,WAS
