@@ -1171,3 +1171,7 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202504130POR,2025-04-13,,POR,LAL,2025,camarto01,POR,55.0,3,3.0,1,1,clingdo01,lenal01,camarto01,POR
 202504130SAC,2025-04-13,,SAC,PHO,2025,gilleco01,PHO,34.0,2,3.0,1,0,sabondo01,plumlma01,murrake02,SAC
 202504130SAS,2025-04-13,,SAS,TOR,2025,barneha02,SAS,18.0,1,1.0,0,0,biyombi01,mogbojo01,barneha02,SAS
+202504190DEN,2025-04-19,,DEN,LAC,2025,zubaciv01,LAC,26.0,2,2.0,0,1,jokicni01,zubaciv01,leonaka01,LAC
+202504190IND,2025-04-19,,IND,MIL,2025,turnemy01,IND,17.0,1,3.0,0,0,turnemy01,lopezbr01,nembhan01,IND
+202504190LAL,2025-04-19,,LAL,MIN,2025,doncilu01,LAL,15.0,1,1.0,0,0,hayesja02,goberru01,doncilu01,LAL
+202504190NYK,2025-04-19,,NYK,DET,2025,thompau01,DET,44.0,3,1.0,1,1,townska01,durenja01,townska01,NYK
