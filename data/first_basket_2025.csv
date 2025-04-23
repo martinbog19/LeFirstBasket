@@ -1181,3 +1181,6 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202504200OKC,2025-04-20,,OKC,MEM,2025,banede01,MEM,21.0,2,2.0,0,1,holmgch01,edeyza01,moranja01,MEM
 202504210DEN,2025-04-21,,DEN,LAC,2025,zubaciv01,LAC,31.0,2,2.0,1,0,jokicni01,zubaciv01,gordoaa01,DEN
 202504210NYK,2025-04-21,,NYK,DET,2025,durenja01,DET,42.0,3,2.0,1,1,townska01,durenja01,bridgmi01,NYK
+202504220IND,2025-04-22,,IND,MIL,2025,nesmiaa01,IND,23.0,2,3.0,0,1,turnemy01,lopezbr01,princta02,MIL
+202504220LAL,2025-04-22,,LAL,MIN,2025,mcdanja02,MIN,50.0,3,2.0,1,1,hayesja02,goberru01,doncilu01,LAL
+202504220OKC,2025-04-22,,OKC,MEM,2025,holmgch01,OKC,106.0,11,1.0,5,5,holmgch01,edeyza01,willija06,OKC
