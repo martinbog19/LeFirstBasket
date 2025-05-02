@@ -1209,3 +1209,5 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202504290NYK,2025-04-29,,NYK,DET,2025,thompau01,DET,47.0,3,1.0,1,1,townska01,durenja01,thompau01,DET
 202504300HOU,2025-04-30,,HOU,GSW,2025,greendr01,GSW,17.0,1,2.0,0,0,sengual01,greendr01,butleji01,GSW
 202504300LAL,2025-04-30,,LAL,MIN,2025,randlju01,MIN,15.0,1,2.0,0,0,hachiru01,goberru01,randlju01,MIN
+202505010DET,2025-05-01,,DET,NYK,2025,brunsja01,NYK,19.0,1,2.0,0,0,durenja01,townska01,hartjo01,NYK
+202505010LAC,2025-05-01,,LAC,DEN,2025,dunnkr01,LAC,18.0,1,2.0,0,0,zubaciv01,jokicni01,zubaciv01,LAC
