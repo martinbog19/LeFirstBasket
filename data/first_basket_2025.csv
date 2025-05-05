@@ -1213,3 +1213,5 @@ game_id,Date,Time,Home,Away,season,first_basket,first_basket_tm,time_elapsed,num
 202505010LAC,2025-05-01,,LAC,DEN,2025,dunnkr01,LAC,18.0,1,2.0,0,0,zubaciv01,jokicni01,zubaciv01,LAC
 202505020GSW,2025-05-02,,GSW,HOU,2025,sengual01,HOU,51.0,3,2.0,1,1,greendr01,sengual01,thompam01,HOU
 202505030DEN,2025-05-03,,DEN,LAC,2025,zubaciv01,LAC,32.0,2,2.0,1,0,jokicni01,zubaciv01,gordoaa01,DEN
+202505040CLE,2025-05-04,,CLE,IND,2025,mobleev01,CLE,31.0,2,2.0,0,1,allenja01,turnemy01,siakapa01,IND
+202505040HOU,2025-05-04,,HOU,GSW,2025,greendr01,GSW,38.0,2,2.0,1,0,sengual01,greendr01,greenja05,HOU
